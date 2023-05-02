@@ -8,12 +8,18 @@ class SplashScreenViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: customButton(
-        text: "Go",
-        onPressed: () {
-          Navigator.pushNamed(context, Routes.loginRoute);
-        },
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          customButton(
+            text: "Go",
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.loginRoute);
+            },
+          ),
+        ],
       ),
     );
   }

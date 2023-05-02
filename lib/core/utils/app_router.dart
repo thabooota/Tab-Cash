@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/features/authentication/login/presentation/view/change_password.dart';
 import 'animation_route.dart';
 import '../../features/authentication/login/presentation/view/forget_password.dart';
 import '../../features/authentication/login/presentation/view/login_screen.dart';
@@ -9,6 +10,8 @@ class Routes {
   static const String loginRoute = "/login";
   static const String forgetPasswordRoute = "/forgetPassword";
   static const String registerRoute = "/register";
+  static const String changePasswordRoute = "/changePassword";
+
 }
 
 class RouteGenerator {
@@ -23,6 +26,8 @@ class RouteGenerator {
       case Routes.forgetPasswordRoute:
         return SlideRight(page: const ForgetPasswordView());
 
+      case Routes.changePasswordRoute:
+        return SlideRight(page: const ChangePasswordView());
       default:
         return unDefinedRoute();
     }

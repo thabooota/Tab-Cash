@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 
 Widget customButton({
@@ -6,10 +7,11 @@ Widget customButton({
   required VoidCallback onPressed,
 }) =>
     SizedBox(
+      width: double.infinity,
       child: TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(
-            backgroundColor: const Color(0xffD9D9D9),
+            backgroundColor: ColorManager.defaultColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),

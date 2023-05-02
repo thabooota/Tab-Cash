@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/app_router.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 import 'package:smartwallet/core/widget/custom_button.dart';
@@ -18,6 +19,7 @@ class LoginScreenViewBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: customTextField(
+            prefixIcon: FontAwesomeIcons.phone,
               obscure: false,
               controller: phoneNumberController,
               text: 'Phone number'
@@ -29,6 +31,7 @@ class LoginScreenViewBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal:8.0),
           child: customTextField(
+            prefixIcon: FontAwesomeIcons.lock,
               obscure: false,
               controller: phoneNumberController,
               text: 'Password',
@@ -50,12 +53,9 @@ class LoginScreenViewBody extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal:8.0),
-          child: SizedBox(
-            width: double.infinity,
-            child: customButton(
-                text: 'Login',
-                onPressed: () {}),
-          ),
+          child: customButton(
+              text: 'Login',
+              onPressed: () {}),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

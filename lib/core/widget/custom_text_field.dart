@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 
 Widget customTextField({
@@ -6,6 +7,7 @@ Widget customTextField({
   required TextEditingController controller,
   required String text,
   IconButton? suffixIcon,
+  IconData ? prefixIcon,
 }) =>
     TextField(
       obscureText: obscure,
@@ -13,7 +15,10 @@ Widget customTextField({
       controller: controller,
       style: Styles.textStyle16,
       decoration: InputDecoration(
+        prefixIcon: Icon(prefixIcon),
         suffixIcon: suffixIcon,
+        suffixIconColor: ColorManager.defaultColor,
+        prefixIconColor: ColorManager.defaultColor,
         contentPadding: const EdgeInsetsDirectional.all(10),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
@@ -27,8 +32,8 @@ Widget customTextField({
 OutlineInputBorder buildOutlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(15.0),
-    borderSide: const BorderSide(
-      color: Colors.black,
+    borderSide:  const BorderSide(
+      color: ColorManager.defaultColor,
     ),
   );
 }
