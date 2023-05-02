@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:smartwallet/core/utils/app_router.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 import 'package:smartwallet/core/widget/custom_button.dart';
 import 'package:smartwallet/core/widget/custom_text_field.dart';
@@ -40,7 +40,7 @@ class LoginScreenViewBody extends StatelessWidget {
         ),
         TextButton(
             onPressed: () {
-              GoRouter.of(context).push('/forgetPassword');
+              Navigator.pushNamed(context, Routes.forgetPasswordRoute);
             },
             child: const Text(
               'Forget Password?',
