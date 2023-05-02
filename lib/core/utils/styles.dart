@@ -5,6 +5,7 @@ abstract class Styles {
     color: Colors.black,
     fontSize: 32,
     fontFamily: 'Cairo',
+    fontWeight: FontWeight.bold,
   );
   static const textStyle16 = TextStyle(
     color: Colors.black,
