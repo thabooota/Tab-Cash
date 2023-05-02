@@ -65,7 +65,9 @@ class LoginScreenViewBody extends StatelessWidget {
             style: Styles.textStyle16,
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.registerRoute);
+                },
                 child: Text(
                     'Register',
                 style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
