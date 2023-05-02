@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 import 'package:smartwallet/core/widget/custom_button.dart';
 import 'package:smartwallet/core/widget/custom_text_field.dart';
@@ -42,7 +43,9 @@ class ForgetPasswordViewBody extends StatelessWidget {
           ),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
             child: const Text(
                 'Back',
             style: Styles.textStyle20,
