@@ -4,7 +4,7 @@ import 'core/utils/app_router.dart';
 
 void main() {
   runApp(
-    MyApp(
+    TapCash(
       routeGenerator: RouteGenerator(),
     ),
   );
