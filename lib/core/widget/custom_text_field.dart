@@ -12,7 +12,6 @@ Widget customTextField({
       maxLines: 1,
       controller: controller,
       style: Styles.textStyle16,
-      autofocus: true,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         contentPadding: const EdgeInsetsDirectional.all(10),

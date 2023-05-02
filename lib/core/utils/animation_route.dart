@@ -8,12 +8,16 @@ class SlideRight extends PageRouteBuilder {
 
           // this returned is Responsible for animation
           transitionsBuilder: (context, animation, animationTwo, child) {
-            const begin = Offset(0, 1);
-            const end = Offset.zero;
-            final tween = Tween(begin: begin, end: end);
-            final offsetAnimation = animation.drive(tween);
-            return SlideTransition(
-              position: offsetAnimation,
+            // const begin = Offset(1, -1);
+            // const end = Offset.zero;
+            // final tween = Tween(begin: begin, end: end);
+            // final offsetAnimation = animation.drive(tween);
+            // return SlideTransition(
+            //   position: offsetAnimation,
+            //   child: child,
+            // );
+            return FadeTransition(
+              opacity: animation,
               child: child,
             );
           },
