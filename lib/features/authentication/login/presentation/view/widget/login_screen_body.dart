@@ -1,77 +1,102 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/core/utils/app_router.dart';
-import 'package:smartwallet/core/utils/styles.dart';
-import 'package:smartwallet/core/widget/custom_button.dart';
-import 'package:smartwallet/core/widget/custom_text_field.dart';
+import 'package:smartwallet/core/utils/assets_manager.dart';
+import '../../../../../../core/utils/app_router.dart';
+import '../../../../../../core/utils/styles.dart';
+import '../../../../../../core/widget/custom_button.dart';
+import '../../../../../../core/widget/custom_text_field.dart';
 
 class LoginScreenViewBody extends StatelessWidget {
-   const LoginScreenViewBody({Key? key}) : super(key: key);
-
+  const LoginScreenViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var phoneNumberController = TextEditingController();
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.end,
+    TextEditingController phoneNumberController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
+
+    return ListView(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customTextField(
-            prefixIcon: FontAwesomeIcons.phone,
-              obscure: false,
-              controller: phoneNumberController,
-              text: 'Phone number'
+        const SizedBox(
+          height: 80.0,
+        ),
+        SvgPicture.asset(
+          AssetsManager.logo,
+          height: 220.0,
+        ),
+        const SizedBox(
+          height: 58.0,
+        ),
+        CustomTextField.customTextFormField(
+          prefixIcon: FontAwesomeIcons.phone,
+          controller: phoneNumberController,
+          inputType: TextInputType.phone,
+          validation: (value) {
+            return null;
+          },
+          text: 'Phone',
+        ),
+        const SizedBox(
+          height: 24.0,
+        ),
+        CustomTextField.customTextFormField(
+          prefixIcon: FontAwesomeIcons.lock,
+          obscure: false,
+          controller: passwordController,
+          text: 'Password',
+          suffixIcon: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.visibility_outlined),
           ),
+          inputType: TextInputType.visiblePassword,
+          validation: (value) {
+            return null;
+          },
         ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.03,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal:8.0),
-          child: customTextField(
-            prefixIcon: FontAwesomeIcons.lock,
-              obscure: false,
-              controller: phoneNumberController,
-              text: 'Password',
-              suffixIcon: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.visibility_outlined),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(
+                  context, Routes.forgetPasswordRoute);
+            },
+            child: Text(
+              'Forget Password?',
+              style: Styles.textStyle16.copyWith(
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ),
-        TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, Routes.forgetPasswordRoute);
-            },
-            child: const Text(
-              'Forget Password?',
-              style: Styles.textStyle16),),
-        SizedBox(
-          height: MediaQuery.of(context).size.height *0.04,
+        const SizedBox(
+          height: 24,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal:8.0),
-          child: customButton(
-              text: 'Login',
-              onPressed: () {}),
+        CustomButton.customTextButton(
+          text: 'Login',
+          onPressed: () {},
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-                'Don’t have an account?',
-            style: Styles.textStyle16,
+            Text(
+              'Don’t You have an account?',
+              style: Styles.textStyle16.copyWith(
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+              ),
             ),
             TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.registerRoute);
-                },
-                child: Text(
-                    'Register',
-                style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
-                ))
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, Routes.registerRoute);
+              },
+              child: Text(
+                'Register',
+                style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700),
+              ),
+            ),
           ],
         ),
       ],

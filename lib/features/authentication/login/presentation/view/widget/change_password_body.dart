@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:smartwallet/core/utils/assets_manager.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
@@ -12,43 +13,66 @@ class ChangePasswordViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var newPasswordController = TextEditingController();
     var repeatNewPasswordController = TextEditingController();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children:  [
-        SizedBox(
-          /*مؤقتا لحد ما داليا تبعت اللوجو */
-          height: MediaQuery.of(context).size.height * 0.3,
-        ),
-        Padding(
-          padding:  EdgeInsets.symmetric(vertical: 8.0 , horizontal: MediaQuery.of(context).size.width * .152),
-          child: const Text(
-            'Forget Password?',
-            style: Styles.textStyle32,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customTextField(
-              prefixIcon: FontAwesomeIcons.lock,
-              obscure: false,
-              controller: newPasswordController,
-              text: 'New Password'),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customTextField(
-              prefixIcon: FontAwesomeIcons.lock,
-              obscure: false,
-              controller: repeatNewPasswordController,
-              text: 'Repeat New Password'),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customButton(
-              text: 'Change Password',
-              onPressed: () {
 
-              }),
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      physics: const BouncingScrollPhysics(),
+      children: [
+        const SizedBox(
+          height: 80.0,
+        ),
+        SvgPicture.asset(
+          AssetsManager.logo,
+          height: 220.0,
+        ),
+        const SizedBox(
+          height: 58.0,
+        ),
+        const Text(
+          'Change Password',
+          style: Styles.textStyle32,
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 28.0,
+        ),
+        CustomTextField.customTextFormField(
+          prefixIcon: FontAwesomeIcons.lock,
+          obscure: false,
+          controller: newPasswordController,
+          text: 'Password',
+          suffixIcon: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.visibility_outlined),
+          ),
+          inputType: TextInputType.visiblePassword,
+          validation: (value) {
+            return null;
+          },
+        ),
+        const SizedBox(
+          height: 24.0,
+        ),
+        CustomTextField.customTextFormField(
+          prefixIcon: FontAwesomeIcons.lock,
+          obscure: false,
+          controller: repeatNewPasswordController,
+          text: 'Password',
+          suffixIcon: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.visibility_outlined),
+          ),
+          inputType: TextInputType.visiblePassword,
+          validation: (value) {
+            return null;
+          },
+        ),
+        const SizedBox(
+          height: 24.0,
+        ),
+        CustomButton.customTextButton(
+          text: 'Change Password',
+          onPressed: () {},
         ),
       ],
     );

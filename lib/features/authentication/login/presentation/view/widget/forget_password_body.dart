@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/core/utils/app_router.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
-import 'package:smartwallet/core/utils/styles.dart';
-import 'package:smartwallet/core/widget/custom_button.dart';
-import 'package:smartwallet/core/widget/custom_text_field.dart';
+import 'package:smartwallet/core/utils/assets_manager.dart';
+import '../../../../../../core/utils/app_router.dart';
+import '../../../../../../core/utils/color_manager.dart';
+import '../../../../../../core/utils/styles.dart';
+import '../../../../../../core/widget/custom_button.dart';
+import '../../../../../../core/widget/custom_text_field.dart';
 
 class ForgetPasswordViewBody extends StatelessWidget {
   const ForgetPasswordViewBody({Key? key}) : super(key: key);
@@ -12,47 +14,58 @@ class ForgetPasswordViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var phoneNameController = TextEditingController();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children:  [
-        SizedBox(
-          /*مؤقتا لحد ما داليا تبعت اللوجو */
-          height: MediaQuery.of(context).size.height * 0.3,
+
+    return ListView(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      children: [
+        const SizedBox(
+          height: 80.0,
         ),
-        Padding(
-          padding:  EdgeInsets.symmetric(vertical: 8.0 , horizontal: MediaQuery.of(context).size.width * .152),
-          child: const Text(
-              'Forget Password?',
-            style: Styles.textStyle32,
-          ),
+        SvgPicture.asset(
+          AssetsManager.logo,
+          height: 220.0,
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customTextField(
-            prefixIcon: FontAwesomeIcons.phone,
-              obscure: false,
-              controller: phoneNameController,
-              text: 'Phone number'),
+        const SizedBox(
+          height: 58.0,
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: customButton(
-              text: 'Send Code',
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.changePasswordRoute);
-              }),
+        const Text(
+          'Forget Password?',
+          style: Styles.textStyle32,
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 28.0,
+        ),
+        CustomTextField.customTextFormField(
+          validation: (value) {
+            return null;
+          },
+          inputType: TextInputType.phone,
+          prefixIcon: FontAwesomeIcons.phone,
+          controller: phoneNameController,
+          text: 'Phone number',
+        ),
+        const SizedBox(
+          height: 24.0,
+        ),
+        CustomButton.customTextButton(
+            text: 'Send Code',
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.changePasswordRoute);
+            }),
+        const SizedBox(
+          height: 8.0,
         ),
         TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              // GoRouter.of(context).pop();
-            },
-            child: Text(
-                'Back',
-            style: Styles.textStyle20.copyWith(
-              color: ColorManager.defaultColor
-            ),
-            ),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, Routes.loginRoute);
+          },
+          child: Text(
+            'Back',
+            style:
+                Styles.textStyle20.copyWith(color: ColorManager.defaultColor),
+          ),
         ),
       ],
     );
