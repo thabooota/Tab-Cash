@@ -6,6 +6,7 @@ import '../../../../../../core/widget/custom_text_field.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
+import '../../../../../../core/widget/logo.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({Key? key}) : super(key: key);
@@ -23,16 +24,7 @@ class RegisterViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       physics: const BouncingScrollPhysics(),
       children: [
-        const SizedBox(
-          height: 40.0,
-        ),
-        SvgPicture.asset(
-          AssetsManager.logo,
-          height: 220.0,
-        ),
-        const SizedBox(
-          height: 48.0,
-        ),
+        const LogoView(),
         Row(
           children: [
             Expanded(
@@ -125,7 +117,9 @@ class RegisterViewBody extends StatelessWidget {
         ),
         CustomButton.customTextButton(
           text: 'Register',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, Routes.verificationRoute);
+          },
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

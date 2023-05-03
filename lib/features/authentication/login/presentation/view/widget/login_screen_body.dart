@@ -6,6 +6,7 @@ import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
+import '../../../../../../core/widget/logo.dart';
 
 class LoginScreenViewBody extends StatelessWidget {
   const LoginScreenViewBody({Key? key}) : super(key: key);
@@ -19,16 +20,7 @@ class LoginScreenViewBody extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       children: [
-        const SizedBox(
-          height: 80.0,
-        ),
-        SvgPicture.asset(
-          AssetsManager.logo,
-          height: 220.0,
-        ),
-        const SizedBox(
-          height: 58.0,
-        ),
+        const LogoView(),
         CustomTextField.customTextFormField(
           prefixIcon: FontAwesomeIcons.phone,
           controller: phoneNumberController,
