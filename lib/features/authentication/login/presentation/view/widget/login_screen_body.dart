@@ -68,7 +68,9 @@ class LoginScreenViewBody extends StatelessWidget {
         ),
         CustomButton.customTextButton(
           text: 'Login',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, Routes.homeRoute);
+          },
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

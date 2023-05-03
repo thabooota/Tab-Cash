@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:smartwallet/features/splash_screen/widget/splash_screen_body.dart';
 
 class SplashScreenView extends StatelessWidget {

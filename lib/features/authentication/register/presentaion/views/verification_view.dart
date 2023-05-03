@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'widget/verification_view_body.dart';
 
 class VerificationView extends StatelessWidget {
-  const VerificationView({Key? key}) : super(key: key);
+  const VerificationView({Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
