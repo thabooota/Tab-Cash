@@ -9,7 +9,7 @@ class TransferMoneyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context,text: "Transfer Money"),
-      body: const TransferMoneyViewBody(),
+      body: const SafeArea(child: TransferMoneyViewBody()),
     );
   }
 }
