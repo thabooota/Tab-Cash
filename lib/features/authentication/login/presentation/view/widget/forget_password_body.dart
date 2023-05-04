@@ -20,6 +20,9 @@ class ForgetPasswordViewBody extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       children: [
+        const SizedBox(
+          height: 40.0,
+        ),
         const LogoView(),
         const Text(
           'Forget Password?',
@@ -51,7 +54,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, Routes.loginRoute);
+            Navigator.pushReplacementNamed(context, Routes.changePasswordRoute);
           },
           child: Text(
             'Back',

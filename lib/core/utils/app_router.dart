@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:smartwallet/features/authentication/login/presentation/view/change_password.dart';
-import 'package:smartwallet/features/authentication/register/presentaion/views/register_view.dart';
-import 'package:smartwallet/features/authentication/register/presentaion/views/verification_view.dart';
-import 'package:smartwallet/features/home/peresntion/views/home_screen.dart';
+import 'package:smartwallet/features/service/presentation/views/charging_wallet_service.dart';
+import 'package:smartwallet/features/service/presentation/views/smart_card_service.dart';
+import 'package:smartwallet/features/service/presentation/views/transfer_money_service.dart';
+import '../../features/authentication/login/presentation/view/change_password.dart';
+import '../../features/authentication/register/presentation/views/register_view.dart';
+import '../../features/authentication/register/presentation/views/verification_view.dart';
+import '../../features/home/presentation/views/home_screen.dart';
 import 'animation_route.dart';
 import '../../features/authentication/login/presentation/view/forget_password.dart';
 import '../../features/authentication/login/presentation/view/login_screen.dart';
@@ -15,7 +18,10 @@ class Routes {
   static const String registerRoute = "/register";
   static const String changePasswordRoute = "/changePassword";
   static const String verificationRoute = "/verification";
-  static const String homeRoute= "/home";
+  static const String homeRoute = "/home";
+  static const String transferMoneyRoute = "/transferMoney";
+  static const String smartCardRoute = "/smartCard";
+  static const String chargingWalletRoute = "/chargingWallet";
 }
 
 class RouteGenerator {
@@ -37,10 +43,24 @@ class RouteGenerator {
         return SlideRight(page: const RegisterView());
 
       case Routes.verificationRoute:
-        return SlideRight(page:  const VerificationView());
+        final phoneNumber = settings.arguments;
+        return SlideRight(
+          page: VerificationView(
+            phoneNumber: phoneNumber.toString(),
+          ),
+        );
 
       case Routes.homeRoute:
         return SlideRight(page: const HomeView());
+
+      case Routes.chargingWalletRoute:
+        return SlideRight(page: const ChargingWalletView());
+
+      case Routes.smartCardRoute:
+        return SlideRight(page: const SmartCardView());
+
+      case Routes.transferMoneyRoute:
+        return SlideRight(page: const TransferMoneyView());
 
       default:
         return unDefinedRoute();

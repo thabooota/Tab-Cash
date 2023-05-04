@@ -19,6 +19,7 @@ class ChangePasswordViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       physics: const BouncingScrollPhysics(),
       children: [
+        const SizedBox(height: 40.0,),
         const LogoView(),
         const Text(
           'Change Password',

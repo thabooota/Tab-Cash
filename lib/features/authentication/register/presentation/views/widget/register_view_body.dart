@@ -118,7 +118,11 @@ class RegisterViewBody extends StatelessWidget {
         CustomButton.customTextButton(
           text: 'Register',
           onPressed: () {
-            Navigator.pushReplacementNamed(context, Routes.verificationRoute);
+            Navigator.pushReplacementNamed(
+              context,
+              Routes.verificationRoute,
+              arguments: "+201050609664",
+            );
           },
         ),
         Row(

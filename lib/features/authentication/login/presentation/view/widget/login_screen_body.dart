@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
+import 'package:smartwallet/core/widget/logo.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
-import '../../../../../../core/widget/logo.dart';
 
 class LoginScreenViewBody extends StatelessWidget {
   const LoginScreenViewBody({Key? key}) : super(key: key);
@@ -20,6 +20,9 @@ class LoginScreenViewBody extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       children: [
+        const SizedBox(
+          height: 40.0,
+        ),
         const LogoView(),
         CustomTextField.customTextFormField(
           prefixIcon: FontAwesomeIcons.phone,
