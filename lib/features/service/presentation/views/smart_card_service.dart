@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/widget/app_bar.dart';
 import 'widgets/smart_card_view_body.dart';
 
 class SmartCardView extends StatelessWidget {
@@ -6,8 +7,9 @@ class SmartCardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SmartCardViewBody(),
+    return  Scaffold(
+      appBar: appBar(context,text: "Smart Card"),
+      body: const SmartCardViewBody(),
     );
   }
 }

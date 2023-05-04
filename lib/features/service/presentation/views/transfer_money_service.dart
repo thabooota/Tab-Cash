@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/widget/app_bar.dart';
 import 'widgets/transfer_money_view_body.dart';
 
 class TransferMoneyView extends StatelessWidget {
@@ -6,8 +7,9 @@ class TransferMoneyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: TransferMoneyViewBody(),
+    return Scaffold(
+      appBar: appBar(context,text: "Transfer Money"),
+      body: const TransferMoneyViewBody(),
     );
   }
 }

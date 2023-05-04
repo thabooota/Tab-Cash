@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:smartwallet/core/utils/app_router.dart';
 import '../../../../../core/utils/assets_manager.dart';
 import '../../../../../core/utils/color_manager.dart';
 import '../../../../../core/utils/styles.dart';
@@ -10,6 +11,7 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.width);
     return ListView(
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.all(8.0),
@@ -41,7 +43,8 @@ class HomeViewBody extends StatelessWidget {
             border: Border.all(color: ColorManager.defaultColor, width: 1),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -63,9 +66,15 @@ class HomeViewBody extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            serviceItem(context, text: "Smart Card"),
-            serviceItem(context, text: "Transfer Money"),
-            serviceItem(context, text: "Charging Wallet"),
+            serviceItem(context, text: "Smart Card", onTap: () {
+              Navigator.pushNamed(context, Routes.smartCardRoute);
+            }),
+            serviceItem(context, text: "Transfer Money", onTap: () {
+              Navigator.pushNamed(context, Routes.transferMoneyRoute);
+            }),
+            serviceItem(context, text: "Charging Wallet", onTap: () {
+              Navigator.pushNamed(context, Routes.chargingWalletRoute);
+            }),
           ],
         ),
       ],

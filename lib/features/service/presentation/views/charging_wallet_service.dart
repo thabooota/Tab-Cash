@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/widget/app_bar.dart';
 import 'widgets/charging_wallet_view_body.dart';
 
 class ChargingWalletView extends StatelessWidget {
@@ -6,8 +7,9 @@ class ChargingWalletView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ChargingWalletViewBody(),
+    return Scaffold(
+      appBar: appBar(context,text: "Charging Wallet"),
+      body: const ChargingWalletViewBody(),
     );
   }
 }
