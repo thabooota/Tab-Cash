@@ -25,7 +25,7 @@ class LoginScreenViewBody extends StatelessWidget {
         ),
         const LogoView(),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.phone,
+          prefixIcon: Icon(FontAwesomeIcons.phone),
           controller: phoneNumberController,
           inputType: TextInputType.phone,
           validation: (value) {
@@ -37,7 +37,7 @@ class LoginScreenViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.lock,
+          prefixIcon: const Icon(FontAwesomeIcons.lock),
           obscure: false,
           controller: passwordController,
           text: 'Password',

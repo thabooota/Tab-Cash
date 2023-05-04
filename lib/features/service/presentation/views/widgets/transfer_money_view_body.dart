@@ -12,6 +12,8 @@ class TransferMoneyViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var phoneNumberController = TextEditingController();
+    var moneyController = TextEditingController();
+    var passwordController = TextEditingController();
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(
@@ -29,7 +31,7 @@ class TransferMoneyViewBody extends StatelessWidget {
             height: 10.0,
           ),
           CustomTextField.customTextFormField(
-              prefixIcon: FontAwesomeIcons.phone,
+              prefixIcon: const Icon(FontAwesomeIcons.phone),
               controller: phoneNumberController,
               text: 'Enter the number you want to transfer to',
               inputType: TextInputType.number,
@@ -48,8 +50,8 @@ class TransferMoneyViewBody extends StatelessWidget {
             height: 10.0,
           ),
           CustomTextField.customTextFormField(
-              prefixIcon: FontAwesomeIcons.euroSign,
-              controller: phoneNumberController,
+              prefixIcon: const Icon(FontAwesomeIcons.euroSign),
+              controller: moneyController,
               text: '  Enter the money you want to transfer',
               inputType: TextInputType.number,
               validation: (value) {
@@ -67,8 +69,8 @@ class TransferMoneyViewBody extends StatelessWidget {
             height: 10.0,
           ),
           CustomTextField.customTextFormField(
-              prefixIcon: FontAwesomeIcons.lock,
-              controller: phoneNumberController,
+              prefixIcon: const Icon(FontAwesomeIcons.lock),
+              controller: passwordController,
               text: 'Enter your password to transfer',
               inputType: TextInputType.number,
               validation: (value) {

@@ -9,7 +9,7 @@ class CustomTextField {
     required TextInputType inputType,
     required FormFieldValidator validation,
     IconButton? suffixIcon,
-    IconData? prefixIcon,
+    Icon? prefixIcon,
     bool obscure = false,
   }) {
     return TextFormField(
@@ -20,7 +20,7 @@ class CustomTextField {
       keyboardType: inputType,
       validator: validation,
       decoration: InputDecoration(
-        prefixIcon: Icon(prefixIcon),
+        prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         suffixIconColor: ColorManager.defaultColor,
         prefixIconColor: ColorManager.defaultColor,

@@ -29,7 +29,7 @@ class RegisterViewBody extends StatelessWidget {
           children: [
             Expanded(
               child: CustomTextField.customTextFormField(
-                prefixIcon: FontAwesomeIcons.solidUser,
+                prefixIcon: const Icon(FontAwesomeIcons.solidUser),
                 controller: firstNameController,
                 inputType: TextInputType.text,
                 validation: (value) {
@@ -43,7 +43,7 @@ class RegisterViewBody extends StatelessWidget {
             ),
             Expanded(
               child: CustomTextField.customTextFormField(
-                prefixIcon: FontAwesomeIcons.solidUser,
+                prefixIcon: const Icon(FontAwesomeIcons.solidUser),
                 controller: lastNameController,
                 inputType: TextInputType.text,
                 validation: (value) {
@@ -58,7 +58,7 @@ class RegisterViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.solidIdCard,
+          prefixIcon: const Icon(FontAwesomeIcons.solidIdCard),
           controller: nationIdController,
           inputType: TextInputType.number,
           validation: (value) {
@@ -70,7 +70,7 @@ class RegisterViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.phone,
+          prefixIcon: Icon(FontAwesomeIcons.phone),
           controller: phoneIdController,
           inputType: TextInputType.phone,
           validation: (value) {
@@ -82,7 +82,7 @@ class RegisterViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.lock,
+          prefixIcon: Icon(FontAwesomeIcons.lock),
           obscure: false,
           controller: passwordController,
           text: 'Password',
@@ -99,7 +99,7 @@ class RegisterViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.lock,
+          prefixIcon: const Icon(FontAwesomeIcons.lock),
           obscure: false,
           controller: confirmPasswordController,
           text: 'Password',

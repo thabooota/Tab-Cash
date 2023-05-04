@@ -30,7 +30,7 @@ class ChangePasswordViewBody extends StatelessWidget {
           height: 28.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.lock,
+          prefixIcon: const Icon(FontAwesomeIcons.lock),
           obscure: false,
           controller: newPasswordController,
           text: 'Password',
@@ -47,7 +47,7 @@ class ChangePasswordViewBody extends StatelessWidget {
           height: 24.0,
         ),
         CustomTextField.customTextFormField(
-          prefixIcon: FontAwesomeIcons.lock,
+          prefixIcon: const Icon(FontAwesomeIcons.lock),
           obscure: false,
           controller: repeatNewPasswordController,
           text: 'Password',

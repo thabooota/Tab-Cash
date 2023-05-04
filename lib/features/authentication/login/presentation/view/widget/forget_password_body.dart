@@ -37,7 +37,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
             return null;
           },
           inputType: TextInputType.phone,
-          prefixIcon: FontAwesomeIcons.phone,
+          prefixIcon: const Icon(FontAwesomeIcons.phone),
           controller: phoneNameController,
           text: 'Phone number',
         ),
