@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:smartwallet/core/utils/app_router.dart';
+import 'package:smartwallet/features/home/presentation/views/widgets/wallet_services_item.dart';
 import '../../../../../core/utils/assets_manager.dart';
 import '../../../../../core/utils/color_manager.dart';
 import '../../../../../core/utils/styles.dart';
@@ -77,6 +78,33 @@ class HomeViewBody extends StatelessWidget {
             }),
           ],
         ),
+        const SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          'Wallet services',
+          style: Styles.textStyle32.copyWith(fontWeight: FontWeight.normal),
+        ),
+        const SizedBox(
+          height: 15.0,
+        ),
+        walletServicesItem(text: 'Pay Bills', onTap: () {}),
+        const SizedBox(
+          height: 15.0,
+        ),
+        walletServicesItem(text: 'Pay Subscriptions', onTap: () {}),
+        const SizedBox(
+          height: 15.0,
+        ),
+        walletServicesItem(text: 'Pay Games', onTap: () {}),
+        const SizedBox(
+          height: 15.0,
+        ),
+        walletServicesItem(text: 'Online Payment', onTap: () {}),
+        const SizedBox(
+          height: 15.0,
+        ),
+        walletServicesItem(text: 'Pay Installments', onTap: () {}),
       ],
     );
   }
