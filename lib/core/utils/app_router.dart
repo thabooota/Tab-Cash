@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartwallet/features/service/presentation/views/charging_wallet_service.dart';
 import 'package:smartwallet/features/service/presentation/views/smart_card_service.dart';
 import 'package:smartwallet/features/service/presentation/views/transfer_money_service.dart';
+import 'package:smartwallet/features/wallet_service/presentation/views/pay_bills_screen.dart';
 import '../../features/authentication/login/presentation/view/change_password.dart';
 import '../../features/authentication/register/presentation/views/register_view.dart';
 import '../../features/authentication/register/presentation/views/verification_view.dart';
@@ -22,6 +23,7 @@ class Routes {
   static const String transferMoneyRoute = "/transferMoney";
   static const String smartCardRoute = "/smartCard";
   static const String chargingWalletRoute = "/chargingWallet";
+  static const String payBills = '/payBills';
 }
 
 class RouteGenerator {
@@ -61,6 +63,9 @@ class RouteGenerator {
 
       case Routes.transferMoneyRoute:
         return SlideRight(page: const TransferMoneyView());
+
+      case Routes.payBills:
+        return SlideRight(page: const PayBillsScreen());
 
       default:
         return unDefinedRoute();

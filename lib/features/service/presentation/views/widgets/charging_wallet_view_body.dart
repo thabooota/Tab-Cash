@@ -135,14 +135,15 @@ class ChargingWalletViewBody extends StatelessWidget {
         ),
         Center(
             child: TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-          'Cancel',
-          style: Styles.textStyle20.copyWith(color: ColorManager.defaultColor),
-        ),
-            ))
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text(
+            'Cancel',
+            style:
+                Styles.textStyle20.copyWith(color: ColorManager.defaultColor),
+          ),
+        ))
       ],
     );
   }

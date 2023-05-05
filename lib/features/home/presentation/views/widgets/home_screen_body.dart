@@ -88,7 +88,9 @@ class HomeViewBody extends StatelessWidget {
         const SizedBox(
           height: 15.0,
         ),
-        walletServicesItem(text: 'Pay Bills', onTap: () {}),
+        walletServicesItem(text: 'Pay Bills', onTap: () {
+          Navigator.pushNamed(context, Routes.payBills);
+        }),
         const SizedBox(
           height: 15.0,
         ),
