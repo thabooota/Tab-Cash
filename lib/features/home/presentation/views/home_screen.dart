@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
+import '../../../../core/utils/color_manager.dart';
 import 'widgets/home_screen_body.dart';
 
 class HomeView extends StatelessWidget {

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
-import 'package:smartwallet/core/utils/styles.dart';
-import 'package:smartwallet/core/widget/custom_button.dart';
-import 'package:smartwallet/core/widget/custom_text_field.dart';
+import '../../../../../core/utils/color_manager.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../../../core/widget/custom_button.dart';
+import '../../../../../core/widget/custom_text_field.dart';
+import '../../../../../core/widget/label_text.dart';
 
 class ChargingWalletViewBody extends StatelessWidget {
   const ChargingWalletViewBody({Key? key}) : super(key: key);
@@ -15,17 +16,12 @@ class ChargingWalletViewBody extends StatelessWidget {
     var expireDateYearController = TextEditingController();
     var moneyController = TextEditingController();
     var passwordController = TextEditingController();
+
     return ListView(
-      physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsetsDirectional.all(15.0),
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsetsDirectional.symmetric(horizontal: 8.0),
       children: [
-        Text(
-          'Card Number',
-          style: Styles.textStyle20.copyWith(
-            fontWeight: FontWeight.normal,
-            color: Colors.black,
-          ),
-        ),
+        labelText(text: "Card Number"),
         CustomTextField.customTextFormField(
             controller: cardNumController,
             text: 'Enter your card number',
@@ -33,16 +29,7 @@ class ChargingWalletViewBody extends StatelessWidget {
             validation: (value) {
               return null;
             }),
-        const SizedBox(
-          height: 20.0,
-        ),
-        Text(
-          'CVV Number',
-          style: Styles.textStyle20.copyWith(
-            fontWeight: FontWeight.normal,
-            color: Colors.black,
-          ),
-        ),
+        labelText(text: "CVV Number"),
         CustomTextField.customTextFormField(
             controller: cvvNumController,
             text: 'Enter 3 or 4 digit number on the card',
@@ -50,19 +37,7 @@ class ChargingWalletViewBody extends StatelessWidget {
             validation: (value) {
               return null;
             }),
-        const SizedBox(
-          height: 20.0,
-        ),
-        Text(
-          'Expire Date',
-          style: Styles.textStyle20.copyWith(
-            color: Colors.black,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-        const SizedBox(
-          height: 10.0,
-        ),
+        labelText(text: "Expire Date"),
         Row(
           children: [
             Expanded(
@@ -74,7 +49,7 @@ class ChargingWalletViewBody extends StatelessWidget {
                     return null;
                   }),
             ),
-            const SizedBox(width: 60.0),
+            const SizedBox(width: 32.0),
             Expanded(
               child: CustomTextField.customTextFormField(
                   controller: expireDateYearController,
@@ -86,16 +61,7 @@ class ChargingWalletViewBody extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(
-          height: 15.0,
-        ),
-        Text(
-          'Money',
-          style: Styles.textStyle20.copyWith(
-            color: Colors.black,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
+        labelText(text: "Money"),
         CustomTextField.customTextFormField(
             controller: moneyController,
             text: 'Enter amount of money',
@@ -103,16 +69,7 @@ class ChargingWalletViewBody extends StatelessWidget {
             validation: (value) {
               return null;
             }),
-        const SizedBox(
-          height: 15.0,
-        ),
-        Text(
-          'Password',
-          style: Styles.textStyle20.copyWith(
-            color: Colors.black,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
+        labelText(text: "Password"),
         CustomTextField.customTextFormField(
             controller: passwordController,
             text: 'Enter your card password',

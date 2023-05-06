@@ -8,7 +8,6 @@ class SmartCardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.height / 2.38);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Column(
@@ -25,10 +24,10 @@ class SmartCardViewBody extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2.38,
               ),
               Positioned(
-                top: MediaQuery.of(context).size.height / 8.9,
-                right: MediaQuery.of(context).size.width / 4.3,
+                top: MediaQuery.of(context).size.height / 9.2,
+                right: MediaQuery.of(context).size.width / 4.2,
                 child: Transform.rotate(
-                  angle: 150.3,
+                  angle: 150.4,
                   child: const Text(
                     "275",
                     style: Styles.textStyle24,
@@ -36,23 +35,23 @@ class SmartCardViewBody extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: MediaQuery.of(context).size.height/ 8.2,
-                left: MediaQuery.of(context).size.width / 7.1,
+                bottom: MediaQuery.of(context).size.height / 8.2,
+                left: MediaQuery.of(context).size.width / 7.5,
                 child: Text(
                   "EGP 1000",
                   style: Styles.textStyle32.copyWith(color: Colors.white),
                 ),
               ),
               Positioned(
-                bottom: MediaQuery.of(context).size.height/ 15.0,
-                left: MediaQuery.of(context).size.width / 5.9,
+                bottom: MediaQuery.of(context).size.height / 15.0,
+                left: MediaQuery.of(context).size.width / 6.0,
                 child: Text(
                   "5482 7460 3378 7486",
                   style: Styles.textStyle24.copyWith(color: Colors.white),
                 ),
               ),
               Positioned(
-                bottom: MediaQuery.of(context).size.height/ 40.0,
+                bottom: MediaQuery.of(context).size.height / 40.0,
                 right: MediaQuery.of(context).size.width / 5.0,
                 child: Text(
                   "04/23",

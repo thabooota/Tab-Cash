@@ -7,7 +7,7 @@ Widget serviceItem(
   required String text,
   required void Function()? onTap,
 }) =>
-    GestureDetector(
+    InkWell(
       onTap: onTap,
       child: Card(
         elevation: 2.0,

@@ -9,21 +9,28 @@ class PayBillsScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 12.0),
+      padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           payBillsItem(
-              onTap: () {
-                showModalBottomSheet(
-                  context: context,
-                  builder: (context) => bottomSheet(context, text: '   phone number'),
-                );
-              },
-              icon: FontAwesomeIcons.droplet),
-          const Spacer(),
-          payBillsItem(onTap: () {}, icon: FontAwesomeIcons.boltLightning),
-          const Spacer(),
-          payBillsItem(onTap: () {}, icon: FontAwesomeIcons.fireBurner),
+            icon: FontAwesomeIcons.droplet,
+            iconColor: const Color(0xff699BF7),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => bottomSheet(context),
+              );
+            },
+          ),
+          payBillsItem(
+              onTap: () {},
+              icon: FontAwesomeIcons.boltLightning,
+              iconColor: Colors.yellow),
+          payBillsItem(
+              onTap: () {},
+              icon: FontAwesomeIcons.gasPump,
+              iconColor: Colors.redAccent),
         ],
       ),
     );
