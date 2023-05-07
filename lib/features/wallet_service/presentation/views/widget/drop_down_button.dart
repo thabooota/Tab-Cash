@@ -29,7 +29,6 @@ class _DropdownButtonViewState extends State<DropdownButtonView> {
       dropdownItems: items,
       value: selectedValue,
       dropdownElevation: 0,
-
       buttonWidth: double.infinity,
       icon: const Icon(Icons.arrow_drop_down,size: 30.0,),
       buttonHeight: 50.0,

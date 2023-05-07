@@ -3,6 +3,7 @@ import 'package:smartwallet/features/service/presentation/views/charging_wallet_
 import 'package:smartwallet/features/service/presentation/views/smart_card_service.dart';
 import 'package:smartwallet/features/service/presentation/views/transfer_money_service.dart';
 import 'package:smartwallet/features/wallet_service/presentation/views/pay_bills_screen.dart';
+import 'package:smartwallet/features/wallet_service/presentation/views/pay_subscriptions_screen.dart';
 import '../../features/authentication/login/presentation/view/change_password.dart';
 import '../../features/authentication/register/presentation/views/register_view.dart';
 import '../../features/authentication/register/presentation/views/verification_view.dart';
@@ -24,6 +25,7 @@ class Routes {
   static const String smartCardRoute = "/smartCard";
   static const String chargingWalletRoute = "/chargingWallet";
   static const String payBills = '/payBills';
+  static const String paySubscriptions = '/paySubscriptions';
 }
 
 class RouteGenerator {
@@ -60,6 +62,9 @@ class RouteGenerator {
 
       case Routes.smartCardRoute:
         return SlideRight(page: const SmartCardView());
+
+      case Routes.paySubscriptions:
+        return SlideRight(page: const PaySubscriptions());
 
       case Routes.transferMoneyRoute:
         return SlideRight(page: const TransferMoneyView());

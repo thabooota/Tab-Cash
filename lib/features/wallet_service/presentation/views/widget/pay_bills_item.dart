@@ -3,7 +3,7 @@ import 'package:smartwallet/core/utils/color_manager.dart';
 
 Widget payBillsItem({
   required Function() onTap,
-  required IconData icon,
+  required Widget widget,
   Color iconColor = ColorManager.defaultColor,
 }) =>
     GestureDetector(
@@ -14,11 +14,7 @@ Widget payBillsItem({
         child: CircleAvatar(
           radius: 43.0,
           backgroundColor: Colors.white,
-          child: Icon(
-            icon,
-            size: 45,
-            color: iconColor,
-          ),
+          child: widget,
         ),
       ),
     );
