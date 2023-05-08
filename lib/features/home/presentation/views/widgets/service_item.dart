@@ -13,7 +13,7 @@ Widget serviceItem(
         elevation: 2.0,
         color: Colors.white,
         child: Container(
-          width: MediaQuery.of(context).size.width / 3.4,
+          width: MediaQuery.of(context).size.width / 3.57,
           height: 100.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),

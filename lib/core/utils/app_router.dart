@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/features/notification/presentation/views/notification_screen.dart';
+import 'package:smartwallet/features/profile/presentation/views/profile_screen.dart';
+import 'package:smartwallet/features/qr/presentation/views/qr_screen.dart';
 import 'package:smartwallet/features/service/presentation/views/charging_wallet_service.dart';
 import 'package:smartwallet/features/service/presentation/views/smart_card_service.dart';
 import 'package:smartwallet/features/service/presentation/views/transfer_money_service.dart';
@@ -21,11 +24,14 @@ class Routes {
   static const String changePasswordRoute = "/changePassword";
   static const String verificationRoute = "/verification";
   static const String homeRoute = "/home";
+  static const String qrRoute = '/qrPage';
+  static const String notificationRoute = '/notification';
+  static const String profileRoute = '/profile';
   static const String transferMoneyRoute = "/transferMoney";
   static const String smartCardRoute = "/smartCard";
   static const String chargingWalletRoute = "/chargingWallet";
-  static const String payBills = '/payBills';
-  static const String paySubscriptions = '/paySubscriptions';
+  static const String payBillsRoute = '/payBills';
+  static const String paySubscriptionsRoute = '/paySubscriptions';
 }
 
 class RouteGenerator {
@@ -57,19 +63,28 @@ class RouteGenerator {
       case Routes.homeRoute:
         return SlideRight(page: const HomeView());
 
+      case Routes.qrRoute:
+        return SlideRight(page: const QRView());
+
+      case Routes.notificationRoute:
+        return SlideRight(page: const NotificationView());
+
+      case Routes.profileRoute:
+        return SlideRight(page: const ProfileView());
+
       case Routes.chargingWalletRoute:
         return SlideRight(page: const ChargingWalletView());
 
       case Routes.smartCardRoute:
         return SlideRight(page: const SmartCardView());
 
-      case Routes.paySubscriptions:
+      case Routes.paySubscriptionsRoute:
         return SlideRight(page: const PaySubscriptions());
 
       case Routes.transferMoneyRoute:
         return SlideRight(page: const TransferMoneyView());
 
-      case Routes.payBills:
+      case Routes.payBillsRoute:
         return SlideRight(page: const PayBillsScreen());
 
       default:

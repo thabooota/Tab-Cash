@@ -10,7 +10,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 14.0,vertical: 16.0),
       children: const [
         HeaderSection(),
         SizedBox(

@@ -24,7 +24,6 @@ class TransferMoneyViewBody extends StatelessWidget {
         ),
         labelText(text: 'Phone Number'),
         CustomTextField.customTextFormField(
-            prefixIcon: const Icon(FontAwesomeIcons.phone),
             controller: phoneNumberController,
             text: 'Enter the number you want to transfer to',
             inputType: TextInputType.number,
@@ -33,7 +32,6 @@ class TransferMoneyViewBody extends StatelessWidget {
             }),
         labelText(text: 'Money'),
         CustomTextField.customTextFormField(
-            prefixIcon: const Icon(FontAwesomeIcons.euroSign),
             controller: moneyController,
             text: '  Enter the money you want to transfer',
             inputType: TextInputType.number,
@@ -42,7 +40,6 @@ class TransferMoneyViewBody extends StatelessWidget {
             }),
         labelText(text: 'Password'),
         CustomTextField.customTextFormField(
-            prefixIcon: const Icon(FontAwesomeIcons.lock),
             controller: passwordController,
             text: 'Enter your password to transfer',
             inputType: TextInputType.visiblePassword,

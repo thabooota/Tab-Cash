@@ -29,7 +29,7 @@ class SmartCardViewBody extends StatelessWidget {
                 child: Transform.rotate(
                   angle: 150.4,
                   child: const Text(
-                    "275",
+                    "952",
                     style: Styles.textStyle24,
                   ),
                 ),
@@ -38,7 +38,7 @@ class SmartCardViewBody extends StatelessWidget {
                 bottom: MediaQuery.of(context).size.height / 8.2,
                 left: MediaQuery.of(context).size.width / 7.5,
                 child: Text(
-                  "EGP 1000",
+                  "EGP 900",
                   style: Styles.textStyle32.copyWith(color: Colors.white),
                 ),
               ),

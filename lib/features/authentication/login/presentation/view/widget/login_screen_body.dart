@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/core/utils/assets_manager.dart';
-import 'package:smartwallet/core/widget/logo.dart';
+import '../../../../../../core/widget/logo.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
@@ -25,7 +23,7 @@ class LoginScreenViewBody extends StatelessWidget {
         ),
         const LogoView(),
         CustomTextField.customTextFormField(
-          prefixIcon: Icon(FontAwesomeIcons.phone),
+          prefixIcon: const Icon(FontAwesomeIcons.phone),
           controller: phoneNumberController,
           inputType: TextInputType.phone,
           validation: (value) {
