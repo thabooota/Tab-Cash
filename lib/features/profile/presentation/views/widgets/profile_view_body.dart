@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/styles.dart';
-
+import '../../../../../../core/utils/styles.dart';
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({Key? key}) : super(key: key);
 

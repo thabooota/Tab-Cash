@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/styles.dart';
+
+import '../../../../../../core/utils/styles.dart';
+
 
 class NotificationViewBody extends StatelessWidget {
   const NotificationViewBody({Key? key}) : super(key: key);

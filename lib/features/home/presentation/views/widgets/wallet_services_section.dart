@@ -25,7 +25,9 @@ class WalletServiceSection extends StatelessWidget {
           },
         ),
         walletServicesItem(text: 'Pay Subscriptions', onTap: () {
-          Navigator.pushNamed(context, Routes.paySubscriptionsRoute);
+          Navigator.pushNamed(
+              context, Routes.paySubscriptionsRoute
+          );
         }),
         walletServicesItem(text: 'Pay Games', onTap: () {}),
         walletServicesItem(text: 'Online Payment', onTap: () {}),

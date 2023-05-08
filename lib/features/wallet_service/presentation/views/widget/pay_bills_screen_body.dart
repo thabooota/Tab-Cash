@@ -15,7 +15,7 @@ class PayBillsScreenBody extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          payBillsItem(
+          payItem(
             widget:const Icon(FontAwesomeIcons.droplet,
             size: 40.0,
             color: Color(0xff699BF7)),
@@ -26,7 +26,7 @@ class PayBillsScreenBody extends StatelessWidget {
               );
             },
           ),
-          payBillsItem(
+          payItem(
               onTap: () {showModalBottomSheet(
                 context: context,
                 builder: (context) => bottomSheet(context),
@@ -34,7 +34,7 @@ class PayBillsScreenBody extends StatelessWidget {
             widget:const Icon(FontAwesomeIcons.boltLightning,
                 size: 40.0,
                 color: Colors.yellow),),
-          payBillsItem(
+          payItem(
               onTap: () {
                 showModalBottomSheet(
                   context: context,

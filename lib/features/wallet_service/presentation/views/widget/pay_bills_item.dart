@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartwallet/core/utils/color_manager.dart';
 
-Widget payBillsItem({
+Widget payItem({
   required Function() onTap,
   required Widget widget,
   Color iconColor = ColorManager.defaultColor,

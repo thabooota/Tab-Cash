@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/styles.dart';
+
+import '../../../../../../core/utils/styles.dart';
 
 class QrViewBody extends StatelessWidget {
   const QrViewBody({Key? key}) : super(key: key);
