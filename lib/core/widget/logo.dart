@@ -10,16 +10,16 @@ class LogoView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 40.0,
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 22,
         ),
         SvgPicture.asset(
           AssetsManager.logo,
           height: 220.0,
         ),
-        const SizedBox(
-          height: 48.0,
-        ),
+         SizedBox(
+           height: MediaQuery.of(context).size.height / 26,
+         ),
       ],
     );
   }

@@ -54,7 +54,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, Routes.changePasswordRoute);
+            Navigator.pushReplacementNamed(context, Routes.loginRoute);
           },
           child: Text(
             'Back',

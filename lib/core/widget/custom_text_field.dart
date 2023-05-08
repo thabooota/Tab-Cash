@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
-import 'package:smartwallet/core/utils/styles.dart';
+import '../utils/color_manager.dart';
+import '../utils/styles.dart';
 
 class CustomTextField {
   static Widget customTextFormField({

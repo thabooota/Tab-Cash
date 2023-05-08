@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/features/profile/presentation/views/children_view.dart';
+import 'package:smartwallet/features/profile/presentation/views/contact_us_view.dart';
+import 'package:smartwallet/features/profile/presentation/views/help_view.dart';
+import 'package:smartwallet/features/profile/presentation/views/history_view.dart';
+import 'package:smartwallet/features/profile/presentation/views/widgets/create_child.dart';
 import 'package:smartwallet/features/service/presentation/views/charging_wallet_service.dart';
 import 'package:smartwallet/features/service/presentation/views/smart_card_service.dart';
 import 'package:smartwallet/features/service/presentation/views/transfer_money_service.dart';
@@ -13,6 +18,7 @@ import '../../features/authentication/register/presentation/views/verification_v
 import '../../features/home/presentation/views/home_screen.dart';
 import '../../features/notification/presentation/views/notification_screen.dart';
 import '../../features/profile/presentation/views/profile_screen.dart';
+import '../../features/profile/presentation/views/setting_view.dart';
 import '../../features/qr/presentation/views/qr_screen.dart';
 import 'animation_route.dart';
 import '../../features/authentication/login/presentation/view/forget_password.dart';
@@ -30,6 +36,12 @@ class Routes {
   static const String qrRoute = '/qrPage';
   static const String notificationRoute = '/notification';
   static const String profileRoute = '/profile';
+  static const String childrenRoute = '/children';
+  static const String addChildRoute = '/addChild';
+  static const String historyRoute = '/history';
+  static const String settingRoute = '/setting';
+  static const String contactUsRoute = '/contactUs';
+  static const String helpRoute = '/help';
   static const String transferMoneyRoute = "/transferMoney";
   static const String smartCardRoute = "/smartCard";
   static const String chargingWalletRoute = "/chargingWallet";
@@ -76,6 +88,24 @@ class RouteGenerator {
 
       case Routes.profileRoute:
         return SlideRight(page: const ProfileView());
+
+      case Routes.childrenRoute:
+        return SlideRight(page: const ChildrenView());
+
+      case Routes.addChildRoute:
+        return SlideRight(page: const CreateChild());
+
+      case Routes.historyRoute:
+        return SlideRight(page: const HistoryView());
+
+      case Routes.settingRoute:
+        return SlideRight(page: const SettingView());
+
+      case Routes.contactUsRoute:
+        return SlideRight(page: const ContactUsView());
+
+      case Routes.helpRoute:
+        return SlideRight(page: const HelpView());
 
       case Routes.chargingWalletRoute:
         return SlideRight(page: const ChargingWalletView());

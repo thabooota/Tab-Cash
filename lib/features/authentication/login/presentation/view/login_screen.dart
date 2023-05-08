@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
+import '../../../../../core/utils/color_manager.dart';
 import 'widget/login_screen_body.dart';
 
 class LoginScreenView extends StatelessWidget {
@@ -12,7 +12,7 @@ class LoginScreenView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorManager.scaffoldBackgroundColor,
         systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.white10,
+          statusBarColor: ColorManager.scaffoldBackgroundColor,
           statusBarIconBrightness: Brightness.dark
         ),
       ),

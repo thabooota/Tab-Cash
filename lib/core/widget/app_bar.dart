@@ -22,7 +22,7 @@ AppBar appBar(
         text,
         style: TextStyle(
           fontFamily: "Cairo",
-          fontSize: 30.0,
+          fontSize: 26.0,
           color: titleColor,
           fontWeight: FontWeight.w600,
         ),

@@ -18,9 +18,6 @@ class LoginScreenViewBody extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       children: [
-        const SizedBox(
-          height: 40.0,
-        ),
         const LogoView(),
         CustomTextField.customTextFormField(
           prefixIcon: const Icon(FontAwesomeIcons.phone),

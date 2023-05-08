@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartwallet/core/utils/app_router.dart';
-import 'package:smartwallet/core/utils/color_manager.dart';
-
+import '../core/utils/app_router.dart';
 import '../core/utils/app_theme.dart';
 
 class TapCash extends StatelessWidget {

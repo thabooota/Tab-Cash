@@ -5,6 +5,7 @@ import '../../../../../core/widget/custom_button.dart';
 import '../../../../../core/utils/color_manager.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widget/shape_print_profile.dart';
+import 'row_item.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({Key? key}) : super(key: key);
@@ -31,16 +32,39 @@ class ProfileViewBody extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(
-          height: 52.0,
-        ),
-        rowItem(text: "Children", icon: FontAwesomeIcons.children),
-        rowItem(text: "History", icon: FontAwesomeIcons.clockRotateLeft),
-        rowItem(text: "Setting", icon: FontAwesomeIcons.gear),
-        rowItem(text: "Contact Us", icon: FontAwesomeIcons.phoneVolume),
-        rowItem(text: "Children", icon: FontAwesomeIcons.circleQuestion),
+        rowItem(
+            text: "Children",
+            icon: FontAwesomeIcons.children,
+            onTap: () {
+              Navigator.pushNamed(context, Routes.childrenRoute);
+            }),
+        rowItem(
+            text: "History",
+            icon: FontAwesomeIcons.clockRotateLeft,
+            onTap: () {
+              Navigator.pushNamed(context, Routes.historyRoute);
+            }),
+        rowItem(
+            text: "Setting",
+            icon: FontAwesomeIcons.gear,
+            onTap: () {
+              Navigator.pushNamed(context, Routes.settingRoute);
+            }),
+        rowItem(
+            text: "Contact Us",
+            icon: FontAwesomeIcons.phoneVolume,
+            onTap: () {
+              Navigator.pushNamed(context, Routes.contactUsRoute);
+            }),
+        rowItem(
+            text: "Help",
+            icon: FontAwesomeIcons.circleQuestion,
+            onTap: () {
+              Navigator.pushNamed(context, Routes.helpRoute);
+            }),
+        const SizedBox(height: 16.0),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 26.0, vertical: 32.0),
+          padding: const EdgeInsets.symmetric(horizontal: 26.0, vertical: 10.0),
           child: CustomButton.customTextButton(
               text: "Logout",
               onPressed: () {
@@ -51,39 +75,3 @@ class ProfileViewBody extends StatelessWidget {
     );
   }
 }
-
-Widget rowItem({
-  required String text,
-  required IconData icon,
-}) =>
-    Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Icon(
-                icon,
-                color: ColorManager.defaultColor,
-              ),
-              const SizedBox(
-                width: 22.0,
-              ),
-              Text(
-                text,
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 22.0),
-              ),
-            ],
-          ),
-          Container(
-            height: 0.5,
-            color: Colors.grey.withOpacity(0.4),
-            margin:
-                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
-          ),
-        ],
-      ),
-    );
