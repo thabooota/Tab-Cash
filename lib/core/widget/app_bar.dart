@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../utils/color_manager.dart';
 
-AppBar appBar(context, {required String text}) => AppBar(
+AppBar appBar(
+  context, {
+  required String text,
+      Color? titleColor,
+  bool centerTitle = false,
+      Color bgColor = ColorManager.scaffoldBackgroundColor
+}) =>
+    AppBar(
       elevation: 0.0,
-      backgroundColor: ColorManager.scaffoldBackgroundColor,
+      backgroundColor: bgColor,
       leading: IconButton(
         onPressed: () {
           Navigator.pop(context);
@@ -12,10 +20,17 @@ AppBar appBar(context, {required String text}) => AppBar(
       ),
       title: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           fontFamily: "Cairo",
           fontSize: 30.0,
+          color: titleColor,
           fontWeight: FontWeight.w600,
         ),
       ),
+      systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.white10,
+          statusBarBrightness: Brightness.light,
+          statusBarIconBrightness: Brightness.dark,
+      ),
+      centerTitle: centerTitle,
     );

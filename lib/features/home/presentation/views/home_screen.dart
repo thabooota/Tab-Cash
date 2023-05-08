@@ -2,9 +2,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/features/home/presentation/manager/app_cubit.dart';
-import 'package:smartwallet/features/home/presentation/manager/app_state.dart';
-
+import '../manager/app_cubit.dart';
+import '../manager/app_state.dart';
 import '../../../../core/utils/color_manager.dart';
 
 class HomeView extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../../../../core/utils/color_manager.dart';
+import '../../../../core/widget/app_bar.dart';
 import 'widgets/profile_view_body.dart';
 
 class ProfileView extends StatelessWidget {
@@ -8,7 +9,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: ProfileViewBody(),
+      body: SafeArea(child: ProfileViewBody()),
     );
   }
 }

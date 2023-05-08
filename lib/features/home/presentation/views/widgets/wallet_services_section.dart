@@ -30,7 +30,6 @@ class WalletServiceSection extends StatelessWidget {
           );
         }),
         walletServicesItem(text: 'Pay Games', onTap: () {}),
-        walletServicesItem(text: 'Online Payment', onTap: () {}),
         walletServicesItem(text: 'Pay Installments', onTap: () {}),
       ],
     );

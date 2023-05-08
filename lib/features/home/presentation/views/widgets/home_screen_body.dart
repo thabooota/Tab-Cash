@@ -8,20 +8,22 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.symmetric(horizontal: 14.0,vertical: 16.0),
-      children: const [
-        HeaderSection(),
-        SizedBox(
-          height: 32.0,
-        ),
-        ServiceSection(),
-        SizedBox(
-          height: 15.0,
-        ),
-        WalletServiceSection(),
-      ],
+    return SafeArea(
+      child: ListView(
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.symmetric(horizontal: 14.0,vertical: 16.0),
+        children: const [
+          HeaderSection(),
+          SizedBox(
+            height: 32.0,
+          ),
+          ServiceSection(),
+          SizedBox(
+            height: 15.0,
+          ),
+          WalletServiceSection(),
+        ],
+      ),
     );
   }
 }

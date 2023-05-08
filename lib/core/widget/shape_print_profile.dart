@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/color_manager.dart';
+
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -8,7 +10,7 @@ class MyPainter extends CustomPainter {
 
     // Path number 1
 
-    paint.color = const Color(0xff386C5F);
+    paint.color = ColorManager.defaultColor;
     path = Path();
     path.lineTo(0, size.height * 0.01);
     path.cubicTo(0, size.height * 0.01, 0, 0, size.width * 0.01, 0);
@@ -29,24 +31,5 @@ class MyPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
-  }
-}
-
-class Testing extends StatelessWidget {
-  const Testing({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          CustomPaint(
-              painter: MyPainter(),
-              child: SizedBox(
-                  width: MediaQuery.of(context).size.width, height: 265),),
-        ],
-      ),
-    );
   }
 }
