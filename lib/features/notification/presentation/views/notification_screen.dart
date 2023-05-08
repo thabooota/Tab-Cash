@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/core/widget/app_bar.dart';
 
 import 'widgets/notification_view_body.dart';
 
