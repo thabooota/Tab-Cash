@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
 import 'package:smartwallet/core/utils/color_manager.dart';
-import 'package:smartwallet/features/wallet_service/presentation/views/widget/pay_bills_item.dart';
+import 'package:smartwallet/features/wallet_service/presentation/views/widget/custom_bottom_sheet.dart';
+import 'package:smartwallet/features/wallet_service/presentation/views/widget/pay_item.dart';
 
 class PaySubscriptionsBody extends StatelessWidget {
   const PaySubscriptionsBody({Key? key}) : super(key: key);
@@ -19,16 +20,21 @@ class PaySubscriptionsBody extends StatelessWidget {
             child: Row(
               children: [
                 payItem(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(context: context,
+                          builder: (context) => bottomSheet(context),);
+                    },
                     widget: const Icon(
                       FontAwesomeIcons.bowlingBall,
                       size: 45.0,
                       color: ColorManager.defaultColor,
-                    )
+                    ), text: 'Club',
                 ),
                 const Spacer(),
                 payItem(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(context: context, builder: (context) => bottomSheet(context),);
+                    },
                     widget: Transform.rotate(
                       angle: 150,
                       child: const Icon(
@@ -36,7 +42,7 @@ class PaySubscriptionsBody extends StatelessWidget {
                           size: 40.0,
                         color: ColorManager.defaultColor,
                       ),
-                    )),
+                    ), text: 'GYM'),
               ],
             ),
           ),
@@ -46,19 +52,26 @@ class PaySubscriptionsBody extends StatelessWidget {
           Row(
             children: [
               payItem(
-                  onTap: () {},
-                  widget: SvgPicture.asset(AssetsManager.spotifay)
+                  onTap: () {
+                    showModalBottomSheet(context: context, builder:(context) => bottomSheet(context));
+                  },
+                  widget: SvgPicture.asset(AssetsManager.spotifay), text: 'Spotify'
                   ),
               const Spacer(),
               payItem(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(context: context, builder: (context) => bottomSheet(context));
+                  },
                   widget: SvgPicture.asset(
-                      AssetsManager.netflix),
+                      AssetsManager.netflix), text: 'Netflix',
               ),
               const Spacer(),
               payItem(
-                  onTap: () {},
-                  widget: SvgPicture.asset(AssetsManager.watchIt),
+                  onTap: () {
+                    showModalBottomSheet(context: context, 
+                        builder: (context) => bottomSheet(context),);
+                  },
+                  widget: SvgPicture.asset(AssetsManager.watchIt), text: 'watch It',
               ),
             ],
           ),

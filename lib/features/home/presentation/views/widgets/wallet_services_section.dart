@@ -29,8 +29,13 @@ class WalletServiceSection extends StatelessWidget {
               context, Routes.paySubscriptionsRoute
           );
         }),
-        walletServicesItem(text: 'Pay Games', onTap: () {}),
-        walletServicesItem(text: 'Pay Installments', onTap: () {}),
+        walletServicesItem(text: 'Pay Games', onTap: () {
+          Navigator.pushNamed(context, Routes.payGamesRoute
+          );
+        }),
+        walletServicesItem(text: 'Pay Installments', onTap: () {
+          Navigator.pushNamed(context, Routes.payInstallmentsRoute);
+        }),
       ],
     );
   }

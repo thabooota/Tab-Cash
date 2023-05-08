@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
 import 'package:smartwallet/features/wallet_service/presentation/views/widget/custom_bottom_sheet.dart';
-import 'package:smartwallet/features/wallet_service/presentation/views/widget/pay_bills_item.dart';
+import 'package:smartwallet/features/wallet_service/presentation/views/widget/pay_item.dart';
 
 class PayBillsScreenBody extends StatelessWidget {
   const PayBillsScreenBody({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class PayBillsScreenBody extends StatelessWidget {
                 context: context,
                 builder: (context) => bottomSheet(context),
               );
-            },
+            }, text: 'Water',
           ),
           payItem(
               onTap: () {showModalBottomSheet(
@@ -33,7 +33,7 @@ class PayBillsScreenBody extends StatelessWidget {
               );},
             widget:const Icon(FontAwesomeIcons.boltLightning,
                 size: 40.0,
-                color: Colors.yellow),),
+                color: Colors.yellow), text: 'Electricity',),
           payItem(
               onTap: () {
                 showModalBottomSheet(
@@ -41,7 +41,7 @@ class PayBillsScreenBody extends StatelessWidget {
                   builder: (context) => bottomSheet(context),
                 );
               },
-            widget: SvgPicture.asset(AssetsManager.fire)),
+            widget: SvgPicture.asset(AssetsManager.fire), text: 'Gas'),
         ],
       ),
     );
