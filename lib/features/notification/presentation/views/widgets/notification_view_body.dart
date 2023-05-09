@@ -21,10 +21,10 @@ class NotificationViewBody extends StatelessWidget {
             Expanded(
               child: ListView.separated(
                   itemBuilder: (context, index) => notificationItem(
-                    context: context,
+                    context,
                       messageText: 'Your current wallet balance is 28900.00 EGP.',
                       messageTime: '01-05-23\n22:39',
-                      operationNumber: 003398359501),
+                      operationNumber: 003398359501,readIt: index>=2),
                   separatorBuilder: (context, index) => const SizedBox(
                         height: 15.0,
                       ),

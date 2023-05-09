@@ -7,11 +7,13 @@ AppBar appBar(
   required String text,
       Color? titleColor,
   bool centerTitle = false,
-      Color bgColor = ColorManager.scaffoldBackgroundColor
-}) =>
+      Color bgColor = ColorManager.scaffoldBackgroundColor,
+      List<Widget>? actions
+    }) =>
     AppBar(
       elevation: 0.0,
       backgroundColor: bgColor,
+      actions: actions,
       leading: IconButton(
         onPressed: () {
           Navigator.pop(context);
@@ -28,7 +30,7 @@ AppBar appBar(
         ),
       ),
       systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.white10,
+          statusBarColor: ColorManager.scaffoldBackgroundColor,
           statusBarBrightness: Brightness.light,
           statusBarIconBrightness: Brightness.dark,
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/features/profile/presentation/views/child_info.dart';
 import 'package:smartwallet/features/profile/presentation/views/children_view.dart';
-import 'package:smartwallet/features/profile/presentation/views/contact_us_view.dart';
 import 'package:smartwallet/features/profile/presentation/views/help_view.dart';
 import 'package:smartwallet/features/profile/presentation/views/history_view.dart';
 import 'package:smartwallet/features/profile/presentation/views/widgets/create_child.dart';
@@ -11,7 +11,6 @@ import 'package:smartwallet/features/wallet_service/presentation/views/pay_bills
 import 'package:smartwallet/features/wallet_service/presentation/views/pay_games.dart';
 import 'package:smartwallet/features/wallet_service/presentation/views/pay_installments.dart';
 import 'package:smartwallet/features/wallet_service/presentation/views/pay_subscriptions_screen.dart';
-import 'package:smartwallet/features/wallet_service/presentation/views/widget/pay_games_body.dart';
 import '../../features/authentication/login/presentation/view/change_password.dart';
 import '../../features/authentication/register/presentation/views/register_view.dart';
 import '../../features/authentication/register/presentation/views/verification_view.dart';
@@ -38,9 +37,9 @@ class Routes {
   static const String profileRoute = '/profile';
   static const String childrenRoute = '/children';
   static const String addChildRoute = '/addChild';
+  static const String childInfoRoute = '/childInfo';
   static const String historyRoute = '/history';
   static const String settingRoute = '/setting';
-  static const String contactUsRoute = '/contactUs';
   static const String helpRoute = '/help';
   static const String transferMoneyRoute = "/transferMoney";
   static const String smartCardRoute = "/smartCard";
@@ -95,14 +94,14 @@ class RouteGenerator {
       case Routes.addChildRoute:
         return SlideRight(page: const CreateChild());
 
+      case Routes.childInfoRoute:
+        return SlideRight(page: const ChildInfo());
+
       case Routes.historyRoute:
         return SlideRight(page: const HistoryView());
 
       case Routes.settingRoute:
         return SlideRight(page: const SettingView());
-
-      case Routes.contactUsRoute:
-        return SlideRight(page: const ContactUsView());
 
       case Routes.helpRoute:
         return SlideRight(page: const HelpView());

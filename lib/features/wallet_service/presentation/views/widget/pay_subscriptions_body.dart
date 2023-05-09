@@ -55,7 +55,7 @@ class PaySubscriptionsBody extends StatelessWidget {
                   onTap: () {
                     showModalBottomSheet(context: context, builder:(context) => bottomSheet(context));
                   },
-                  widget: SvgPicture.asset(AssetsManager.spotifay), text: 'Spotify'
+                  widget: SvgPicture.asset(AssetsManager.spotify), text: 'Spotify'
                   ),
               const Spacer(),
               payItem(

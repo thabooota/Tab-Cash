@@ -54,7 +54,36 @@ class ProfileViewBody extends StatelessWidget {
             text: "Contact Us",
             icon: FontAwesomeIcons.phoneVolume,
             onTap: () {
-              Navigator.pushNamed(context, Routes.contactUsRoute);
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => Container(
+                  height: MediaQuery.of(context).size.height / 3,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(64.0),
+                      topRight: Radius.circular(64.0),
+                    ),
+                    color: ColorManager.scaffoldBackgroundColor,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "You can contact us by calling customer service at number",
+                        style: Styles.textStyle24,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 18.0,),
+                      Text(
+                        "198765",
+                        style: Styles.textStyle24
+                            .copyWith(color: ColorManager.defaultColor),
+                      ),
+                    ],
+                  ),
+                ),
+              );
             }),
         rowItem(
             text: "Help",

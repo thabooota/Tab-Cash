@@ -13,7 +13,8 @@ class LoginScreenView extends StatelessWidget {
         backgroundColor: ColorManager.scaffoldBackgroundColor,
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: ColorManager.scaffoldBackgroundColor,
-          statusBarIconBrightness: Brightness.dark
+          statusBarBrightness: Brightness.light,
+          statusBarIconBrightness: Brightness.dark,
         ),
       ),
       body: const LoginScreenViewBody(),

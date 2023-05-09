@@ -8,7 +8,7 @@ class ChargingWalletView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context,text: "Charging Wallet"),
+      appBar: appBar(context,text: "Charging Wallet",centerTitle: true),
       body: const ChargingWalletViewBody(),
     );
   }

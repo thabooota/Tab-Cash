@@ -6,13 +6,15 @@ class CustomButton {
   static Widget customTextButton({
     required String text,
     required VoidCallback onPressed,
+    Color bgColor = ColorManager.defaultColor,
+    double width = double.infinity,
   }) =>
       SizedBox(
-        width: double.infinity,
+        width: width,
         child: TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(
-            backgroundColor: ColorManager.defaultColor,
+            backgroundColor: bgColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),

@@ -41,7 +41,7 @@ class PayBillsScreenBody extends StatelessWidget {
                   builder: (context) => bottomSheet(context),
                 );
               },
-            widget: SvgPicture.asset(AssetsManager.fire), text: 'Gas'),
+            widget: SvgPicture.asset(AssetsManager.gas), text: 'Gas'),
         ],
       ),
     );

@@ -8,7 +8,7 @@ class TransferMoneyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context,text: "Transfer Money"),
+      appBar: appBar(context,text: "Transfer Money",centerTitle: true),
       body: const SafeArea(child: TransferMoneyViewBody()),
     );
   }

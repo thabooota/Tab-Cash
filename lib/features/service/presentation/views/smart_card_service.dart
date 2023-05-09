@@ -8,7 +8,7 @@ class SmartCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: appBar(context,text: "Smart Card"),
+      appBar: appBar(context,text: "Smart Card",centerTitle: true),
       body: const SmartCardViewBody(),
     );
   }
