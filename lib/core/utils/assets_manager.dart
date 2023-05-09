@@ -11,5 +11,6 @@ class AssetsManager {
   static const String fortnite = "";
   static const String beTech = "";
   static const String raia = "";
-  static const String scanQrPhoto= "assets/images/1376_U1RVRElPIEtBVCAyMzQtNTQ.jpg";
+  static const String qr = "assets/images/qr.svg";
+  static const String scanQrPhoto= "assets/images/qr_code.jpg";
 }
