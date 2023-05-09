@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
+import 'package:smartwallet/features/authentication/register/presentation/views/widget/verification_view_body.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
@@ -121,7 +122,7 @@ class RegisterViewBody extends StatelessWidget {
             Navigator.pushReplacementNamed(
               context,
               Routes.verificationRoute,
-              arguments: "+201050609664",
+              arguments: ScreenArguments(phoneNumber: "+201050609664",otpComplete: "",verificationId: "", newAccount: true),
             );
           },
         ),

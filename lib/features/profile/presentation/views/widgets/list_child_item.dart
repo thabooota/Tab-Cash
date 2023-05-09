@@ -31,7 +31,7 @@ Widget listChildrenItem(context) => InkWell(
       child: Column(
         children: [
           const Text(
-            "Mohamed Ahmed",
+            "Mohammed Ahmed",
             style: Styles.textStyle24,
           ),
           Row(

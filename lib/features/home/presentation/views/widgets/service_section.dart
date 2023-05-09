@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../core/utils/app_router.dart';
 import 'service_item.dart';
 
@@ -8,8 +7,8 @@ class ServiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return ListView(
+      scrollDirection: Axis.horizontal,
       children: [
         serviceItem(
           context,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../features/authentication/register/presentation/views/widget/verification_view_body.dart';
 import '../../features/profile/presentation/views/child_info.dart';
 import '../../features/profile/presentation/views/children_view.dart';
 import '../../features/profile/presentation/views/help_view.dart';
@@ -69,10 +70,10 @@ class RouteGenerator {
         return SlideRight(page: const RegisterView());
 
       case Routes.verificationRoute:
-        final phoneNumber = settings.arguments;
+        final args = settings.arguments as ScreenArguments;
         return SlideRight(
           page: VerificationView(
-            phoneNumber: phoneNumber.toString(),
+            arguments: args,
           ),
         );
 

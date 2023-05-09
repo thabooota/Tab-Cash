@@ -9,54 +9,72 @@ class PayGamesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> widgets = [
+      SvgPicture.asset(
+        AssetsManager.pubg,
+        height: 100.0,
+        fit: BoxFit.cover,
+      ),
+      SvgPicture.asset(
+        AssetsManager.freeFire,
+        height: 100.0,
+        width: 50.0,
+      ),
+      Image.asset(
+        AssetsManager.fifa,
+        height: 100.0,
+        width: 140.0,
+      ),
+      SvgPicture.asset(
+        AssetsManager.lol,
+        height: 100.0,
+        width: 50.0,
+      ),
+      SvgPicture.asset(
+        AssetsManager.valorant,
+        height: 100.0,
+        width: 100.0,
+      ),
+      SvgPicture.asset(
+        AssetsManager.fortnite,
+        height: 100.0,
+        width: 80.0,
+      ),
+    ];
+
+    List<String> names = [
+      "Pubg",
+      "Free Fire",
+      "FIFA",
+      "LOL",
+      "Valorant",
+      "Fortnite",
+    ];
+
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              payItem(onTap: () {
-                showModalBottomSheet(
-                  context: context,
-                  builder: (context) => bottomSheet(context),);
-              },
-                widget: SvgPicture.asset(
-                  AssetsManager.pubg,
-                ), text: 'Pubg',
-              ),
-              const Spacer(),
-              payItem(
+      child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200,
+            childAspectRatio: MediaQuery.of(context).size.height / 750,
+            // crossAxisSpacing: 0,
+            mainAxisSpacing: 20,
+          ),
+          itemCount: widgets.length,
+          itemBuilder: (BuildContext ctx, index) {
+            return Container(
+              alignment: Alignment.center,
+              child: payItem3(
                   onTap: () {
-                    showModalBottomSheet(context: context, builder: (context) => bottomSheet(context),);
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => bottomSheet(context),
+                    );
                   },
-                  widget: SvgPicture.asset(AssetsManager.freeFire),
-                  text: 'Free Fire'),
-              const Spacer(),
-              payItem(onTap: () {
-                showModalBottomSheet(context: context, builder: (context) => bottomSheet(context),);
-              }, widget: SvgPicture.asset(AssetsManager.fifa), text: 'FIFA')
-            ],
-          ),
-          const SizedBox(height: 20.0,),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 60.0),
-            child: Row(
-              children: [
-                payItem(
-                    onTap: () {
-                      showModalBottomSheet(context: context, builder: (context) => bottomSheet(context),);
-                    },
-                    widget: SvgPicture.asset(AssetsManager.freeFire),
-                    text: 'LOL'),
-                const Spacer(),
-                payItem(onTap: () {
-                  showModalBottomSheet(context: context, builder: (context) => bottomSheet(context),);
-                }, widget: SvgPicture.asset(AssetsManager.fifa), text: 'Fortnite')
-              ],
-            ),
-          ),
-        ],
-      ),
+                  widget: widgets[index],
+                  text: names[index]),
+            );
+          }),
     );
   }
 }

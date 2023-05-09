@@ -51,7 +51,7 @@ class InformationChildSection extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: "Mohamed Ahmed",
+                      text: "Mohammed Ahmed",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 20.0,
@@ -73,7 +73,7 @@ class InformationChildSection extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: "30206061403177",
+                      text: "12345678912345",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 20.0,

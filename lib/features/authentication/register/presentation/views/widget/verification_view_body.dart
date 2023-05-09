@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:smartwallet/core/widget/logo.dart';
+import '../../../../../../core/widget/logo.dart';
 import '../../../../../../core/utils/app_router.dart';
-import '../../../../../../core/utils/assets_manager.dart';
 import '../../../../../../core/utils/color_manager.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
 
-class VerificationViewBody extends StatelessWidget {
+class ScreenArguments {
   late String otpComplete;
   late String phoneNumber;
   late String verificationId;
+  late bool newAccount;
 
-  VerificationViewBody({
-    Key? key,
+  ScreenArguments({
     required this.otpComplete,
     required this.phoneNumber,
     required this.verificationId,
+    required this.newAccount,
+  });
+}
+
+class VerificationViewBody extends StatelessWidget {
+  final ScreenArguments arguments;
+
+  const VerificationViewBody({
+    Key? key,
+    required this.arguments,
   }) : super(key: key);
 
   @override
@@ -41,7 +49,7 @@ class VerificationViewBody extends StatelessWidget {
               height: 24.0,
             ),
             Text(
-              "We Will Send 4 digit Verification Code to\n your $phoneNumber, Please Enter It.",
+              "We Will Send 4 digit Verification Code to\n your ${arguments.phoneNumber}, Please Enter It.",
               style: Styles.textStyle16,
               textAlign: TextAlign.center,
             ),
@@ -65,14 +73,13 @@ class VerificationViewBody extends StatelessWidget {
                   fieldHeight: 53,
                   fieldWidth: 57,
                   borderWidth: 1.2,
-                  activeFillColor: ColorManager
-                      .defaultColor, // اللون الي جوا لما يبقا متحدد
-                  inactiveFillColor:
-                  ColorManager.scaffoldBackgroundColor, // اللون الي جوا لما يبقا مش متحدد
-                  activeColor:
-                  ColorManager.defaultColor, // لون البوردرالمتحدده
+                  activeFillColor:
+                      ColorManager.defaultColor, // اللون الي جوا لما يبقا متحدد
+                  inactiveFillColor: ColorManager
+                      .scaffoldBackgroundColor, // اللون الي جوا لما يبقا مش متحدد
+                  activeColor: ColorManager.defaultColor, // لون البوردرالمتحدده
                   inactiveColor:
-                  ColorManager.defaultColor, // لون البوردر الي مش متحدده
+                      ColorManager.defaultColor, // لون البوردر الي مش متحدده
                   selectedFillColor: ColorManager
                       .scaffoldBackgroundColor, // اللون الي انا واقف عليه
                   selectedColor: ColorManager.defaultColor,
@@ -80,7 +87,7 @@ class VerificationViewBody extends StatelessWidget {
                 animationDuration: const Duration(milliseconds: 300),
                 enableActiveFill: true,
                 onCompleted: (code) {
-                  otpComplete = code;
+                  arguments.otpComplete = code;
                 },
                 onChanged: (value) {},
               ),
@@ -110,7 +117,13 @@ class VerificationViewBody extends StatelessWidget {
             ),
             CustomButton.customTextButton(
               text: 'Verify & Continue',
-              onPressed: () {},
+              onPressed: () {
+                if(arguments.newAccount){
+                  Navigator.pushReplacementNamed(context, Routes.homeRoute);
+                }else{
+                  Navigator.pushReplacementNamed(context, Routes.changePasswordRoute);
+                }
+              },
             ),
             const SizedBox(
               height: 8.0,

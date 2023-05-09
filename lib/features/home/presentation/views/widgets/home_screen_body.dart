@@ -11,13 +11,16 @@ class HomeViewBody extends StatelessWidget {
     return SafeArea(
       child: ListView(
         physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 14.0,vertical: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 16.0),
         children: const [
           HeaderSection(),
           SizedBox(
             height: 32.0,
           ),
-          ServiceSection(),
+          SizedBox(
+            height: 110.0,
+            child: ServiceSection(),
+          ),
           SizedBox(
             height: 15.0,
           ),

@@ -13,7 +13,6 @@ class CreateChild extends StatelessWidget {
     TextEditingController nameController = TextEditingController();
     TextEditingController idController = TextEditingController();
     TextEditingController phoneController = TextEditingController();
-    TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     TextEditingController repeatController = TextEditingController();
 
@@ -52,18 +51,6 @@ class CreateChild extends StatelessWidget {
               return null;
             },
             text: 'Phone',
-          ),
-          const SizedBox(
-            height: 24.0,
-          ),
-          CustomTextField.customTextFormField(
-            prefixIcon: const Icon(FontAwesomeIcons.solidEnvelope),
-            controller: emailController,
-            inputType: TextInputType.emailAddress,
-            validation: (value) {
-              return null;
-            },
-            text: 'Email Address',
           ),
           const SizedBox(
             height: 24.0,

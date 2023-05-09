@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
+import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widget/custom_button.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
@@ -65,7 +66,9 @@ class ChangePasswordViewBody extends StatelessWidget {
         ),
         CustomButton.customTextButton(
           text: 'Change Password',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, Routes.homeRoute);
+          },
         ),
       ],
     );

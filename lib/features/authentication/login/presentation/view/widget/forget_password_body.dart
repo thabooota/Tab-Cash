@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smartwallet/core/utils/assets_manager.dart';
+import 'package:smartwallet/features/authentication/register/presentation/views/widget/verification_view_body.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/color_manager.dart';
 import '../../../../../../core/utils/styles.dart';
@@ -47,7 +46,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
         CustomButton.customTextButton(
             text: 'Send Code',
             onPressed: () {
-              Navigator.pushNamed(context, Routes.changePasswordRoute);
+              Navigator.pushReplacementNamed(context, Routes.verificationRoute,arguments: ScreenArguments(otpComplete: "", phoneNumber: "+201227559261", verificationId: "", newAccount: false),);
             }),
         const SizedBox(
           height: 8.0,

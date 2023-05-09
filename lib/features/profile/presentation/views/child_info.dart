@@ -10,14 +10,14 @@ class ChildInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context, text: "Mohamed", centerTitle: true, actions: [
+      appBar: appBar(context, text: "Mohammed", centerTitle: true, actions: [
         Padding(
           padding: const EdgeInsets.only(right: 10.0),
           child: TextButton(
             onPressed: () {},
             style: TextButton.styleFrom(
               backgroundColor: Colors.amber,
-              padding: EdgeInsets.symmetric(vertical: 1.0),
+              padding: const EdgeInsets.symmetric(vertical: 1.0),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))
             ),
             child: const Text(

@@ -19,6 +19,7 @@ Widget serviceItem(
             borderRadius: BorderRadius.circular(10.0),
             border: Border.all(color: ColorManager.defaultColor, width: 1),
           ),
+          margin: const EdgeInsets.only(right: 3.0),
           padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/39.0),
           child: Row(
             children: [
