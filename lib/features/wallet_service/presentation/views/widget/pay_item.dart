@@ -18,7 +18,7 @@ Widget payItem({
             backgroundColor: ColorManager.darkDefaultColor,
             child: CircleAvatar(
               radius: 43.0,
-              backgroundColor: Colors.white,
+              backgroundColor: ColorManager.darkDefaultColor,
               child: widget,
             ),
           ),
@@ -48,7 +48,7 @@ Widget payItem2({
                 topLeft: Radius.circular(46.0),
                 bottomRight: Radius.circular(46.0),
               ),
-              color: Colors.white,
+              color: Colors.transparent,
               border: Border.all(
                 width: 2.0,
                 color: ColorManager.darkDefaultColor,
@@ -58,7 +58,7 @@ Widget payItem2({
           ),
         ),
         const SizedBox(height: 8.0,),
-        Text(text,style: const TextStyle(color: ColorManager.darkDefaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
+        Text(text,style: const TextStyle(color: ColorManager.darkTextColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
       ],
     );
 
@@ -68,8 +68,7 @@ Widget payItem3({
   required Widget widget,
   Color iconColor = ColorManager.darkDefaultColor,
   required String text,
-}) =>
-    Column(
+}) => Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         GestureDetector(
@@ -77,6 +76,6 @@ Widget payItem3({
           child: ClipRRect(borderRadius: BorderRadius.circular(22.0),child: widget),
         ),
         const SizedBox(height: 8.0,),
-        Text(text,style: const TextStyle(color: ColorManager.darkDefaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
+        Text(text,style: const TextStyle(color: ColorManager.darkTextColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
       ],
     );

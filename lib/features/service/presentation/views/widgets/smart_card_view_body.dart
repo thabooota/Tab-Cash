@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import '../../../../../core/utils/assets_manager.dart';
 import '../../../../../core/utils/styles.dart';
 
@@ -39,7 +40,7 @@ class SmartCardViewBody extends StatelessWidget {
                 left: MediaQuery.of(context).size.width / 7.5,
                 child: Text(
                   "EGP 900",
-                  style: Styles.textStyle32.copyWith(color: Colors.white),
+                  style: Styles.textStyle32.copyWith(color: ColorManager.darkDefaultColor),
                 ),
               ),
               Positioned(
@@ -66,7 +67,7 @@ class SmartCardViewBody extends StatelessWidget {
           ),
           Text(
             "The card is accepted for payment on\nany site inside or outside Egypt.",
-            style: Styles.textStyle20.copyWith(color: Colors.black),
+            style: Styles.textStyle20.copyWith(color: ColorManager.darkTextColor),
             textAlign: TextAlign.center,
           ),
         ],

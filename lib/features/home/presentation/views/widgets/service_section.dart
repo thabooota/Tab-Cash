@@ -12,21 +12,21 @@ class ServiceSection extends StatelessWidget {
       children: [
         serviceItem(
           context,
-          text: "Smart Card",
+          text: "Smart\nCard",
           onTap: () {
             Navigator.pushNamed(context, Routes.smartCardRoute);
           },
         ),
         serviceItem(
           context,
-          text: "Transfer Money",
+          text: "Transfer\nMoney",
           onTap: () {
             Navigator.pushNamed(context, Routes.transferMoneyRoute);
           },
         ),
         serviceItem(
           context,
-          text: "Charging Wallet",
+          text: "Charging\nWallet",
           onTap: () {
             Navigator.pushNamed(context, Routes.chargingWalletRoute);
           },

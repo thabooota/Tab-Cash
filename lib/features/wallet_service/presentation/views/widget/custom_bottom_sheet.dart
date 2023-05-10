@@ -12,8 +12,15 @@ Widget bottomSheet(context) {
   var controller = TextEditingController();
   var passwordController = TextEditingController();
 
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+  return Container(
+    padding: EdgeInsetsDirectional.symmetric(horizontal: 8),
+    decoration: const BoxDecoration(
+      color:ColorManager.darkMode,
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(25.0),
+        topRight: Radius.circular(25.0),
+      )
+  ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

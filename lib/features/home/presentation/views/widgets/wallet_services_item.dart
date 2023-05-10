@@ -23,11 +23,11 @@ Widget walletServicesItem({
             Text(
               text,
               style: Styles.textStyle20.copyWith(
-                color: Colors.black,
+                color: ColorManager.darkTextColor,
                 fontWeight: FontWeight.normal,
               ),
             ),
-            const Icon(Icons.arrow_forward_ios),
+            const Icon(Icons.arrow_forward_ios,color: ColorManager.darkTextColor,),
           ],
         ),
       ),

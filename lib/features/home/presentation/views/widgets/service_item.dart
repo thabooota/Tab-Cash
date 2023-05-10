@@ -11,7 +11,7 @@ Widget serviceItem(
       onTap: onTap,
       child: Card(
         elevation: 2.0,
-        color: Colors.white,
+        color: ColorManager.darkMode,
         child: Container(
           width: MediaQuery.of(context).size.width / 3.57,
           height: 100.0,
@@ -27,12 +27,13 @@ Widget serviceItem(
                 child: Text(
                   text,
                   style: Styles.textStyle16.copyWith(
-                    color: Colors.black,
+                    color: ColorManager.darkTextColor,
                   ),
                 ),
               ),
               const Icon(
                 Icons.arrow_forward_ios,
+                color: ColorManager.darkMode,
               ),
             ],
           ),
