@@ -6,3 +6,9 @@ ThemeData appTheme = ThemeData(
   useMaterial3: true,
   fontFamily: 'Cairo',
 );
+
+ThemeData lightAppTheme = ThemeData(
+  scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
+  useMaterial3: true,
+  fontFamily: 'Cairo',
+);

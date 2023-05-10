@@ -25,21 +25,6 @@ class _QRViewState extends State<QRView> {
           SizedBox(
             height: MediaQuery.of(context).size.height / 10.0,
           ),
-          // Center(
-          //   child: Container(
-          //     height: MediaQuery.of(context).size.height * 0.4,
-          //     width: MediaQuery.of(context).size.width * 0.8,
-          //     decoration: BoxDecoration(
-          //       image: DecorationImage(
-          //         fit: BoxFit.cover,
-          //         image: SvgPicture.asset(AssetsManager.qr) as ImageProvider,
-          //       ),
-          //       border: Border.all(color: ColorManager.defaultColor, width: 2),
-          //       borderRadius: BorderRadius.circular(40.0),
-          //     ),
-          //     child: const SizedBox(),
-          //   ),
-          // ),
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height * 0.4,
@@ -47,7 +32,7 @@ class _QRViewState extends State<QRView> {
               decoration: BoxDecoration(
                 border: Border.all(color: ColorManager.darkDefaultColor, width: 2),
                 borderRadius: BorderRadius.circular(40.0),
-                color: Colors.white,
+                color: ColorManager.darkScaffoldBackgroundColor,
               ),
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: ClipRRect(
