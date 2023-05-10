@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
+import 'package:smartwallet/core/utils/styles.dart';
 import '../../../../core/widget/app_bar.dart';
 import 'widgets/history_view_body.dart';
 
