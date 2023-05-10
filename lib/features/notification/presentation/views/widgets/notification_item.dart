@@ -29,7 +29,7 @@ Widget notificationItem(
             padding: const EdgeInsetsDirectional.all(14.0),
             decoration: BoxDecoration(
               color:
-                  readIt ? Colors.white : ColorManager.darkScaffoldBackgroundColor,
+                  readIt ? ColorManager.darkMode : ColorManager.gray2,
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(40.0),
                 bottomRight: Radius.circular(40.0),
@@ -46,7 +46,7 @@ Widget notificationItem(
                         child: Text(
                       messageText,
                       style: Styles.textStyle16.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.black),
+                          fontWeight: FontWeight.bold, color: readIt ? ColorManager.darkTextColor : Colors.black,),
                     )),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.1,
@@ -55,7 +55,7 @@ Widget notificationItem(
                       messageTime,
                       textAlign: TextAlign.end,
                       style: Styles.textStyle16.copyWith(
-                          color: Colors.black45,
+                          color: readIt ? ColorManager.darkTextColor : Colors.black,
                           fontWeight: FontWeight.w400,
                           fontSize: 12.0),
                     ),
@@ -66,7 +66,7 @@ Widget notificationItem(
                 ),
                 Text(
                   'Operation number: $operationNumber',
-                  style: Styles.textStyle16.copyWith(color: Colors.black),
+                  style: Styles.textStyle16.copyWith(color: readIt ? ColorManager.darkTextColor : Colors.black,),
                 ),
               ],
             ),
