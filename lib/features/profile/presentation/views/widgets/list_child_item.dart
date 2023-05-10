@@ -21,7 +21,7 @@ Widget listChildrenItem(context) => InkWell(
       width: MediaQuery.of(context).size.width - 32.0,
       decoration: BoxDecoration(
         border: Border.all(
-          color: ColorManager.defaultColor,
+          color: ColorManager.darkDefaultColor,
           width: 1.0,
         ),
         borderRadius: const BorderRadius.only(

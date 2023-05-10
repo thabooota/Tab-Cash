@@ -6,7 +6,7 @@ class CustomButton {
   static Widget customTextButton({
     required String text,
     required VoidCallback onPressed,
-    Color bgColor = ColorManager.defaultColor,
+    Color bgColor = ColorManager.darkDefaultColor,
     double width = double.infinity,
   }) =>
       SizedBox(
@@ -22,7 +22,7 @@ class CustomButton {
           ),
           child: Text(
             text,
-            style: Styles.textStyle20,
+            style: Styles.textStyle20.copyWith(color: ColorManager.darkTextColor),
           ),
         ),
       );

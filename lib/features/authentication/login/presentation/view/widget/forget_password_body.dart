@@ -58,7 +58,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
           child: Text(
             'Back',
             style:
-                Styles.textStyle20.copyWith(color: ColorManager.defaultColor),
+                Styles.textStyle20.copyWith(color: ColorManager.darkDefaultColor),
           ),
         ),
       ],

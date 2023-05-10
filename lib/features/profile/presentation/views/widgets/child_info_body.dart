@@ -45,7 +45,7 @@ class InformationChildSection extends StatelessWidget {
               text: const TextSpan(
                   text: "Full Name: ",
                   style: TextStyle(
-                    color: ColorManager.defaultColor,
+                    color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -67,7 +67,7 @@ class InformationChildSection extends StatelessWidget {
               text: const TextSpan(
                   text: "National ID: ",
                   style: TextStyle(
-                    color: ColorManager.defaultColor,
+                    color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -89,7 +89,7 @@ class InformationChildSection extends StatelessWidget {
               text: const TextSpan(
                   text: "Phone Number: ",
                   style: TextStyle(
-                    color: ColorManager.defaultColor,
+                    color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -118,7 +118,7 @@ class BalanceChildSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ColorManager.defaultColor,
+        color: ColorManager.darkDefaultColor,
         borderRadius: BorderRadius.circular(16.0),
       ),
       padding: const EdgeInsets.symmetric(vertical: 12.0),
@@ -146,14 +146,14 @@ class BalanceChildSection extends StatelessWidget {
             ],
           ),
           Container(
-            color: ColorManager.scaffoldBackgroundColor,
+            color: ColorManager.darkScaffoldBackgroundColor,
             margin: const EdgeInsets.only(top: 12.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Icon(
                   FontAwesomeIcons.clockRotateLeft,
-                  color: ColorManager.defaultColor,
+                  color: ColorManager.darkDefaultColor,
                   size: 20.0,
                 ),
                 SizedBox(
@@ -162,7 +162,7 @@ class BalanceChildSection extends StatelessWidget {
                 Text(
                   "History",
                   style: TextStyle(
-                    color: ColorManager.defaultColor,
+                    color: ColorManager.darkDefaultColor,
                     fontSize: 22.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -181,7 +181,7 @@ Widget orderReviewItem() => Container(
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(16.0), topLeft: Radius.circular(16.0)),
-        color: ColorManager.defaultColor,
+        color: ColorManager.darkDefaultColor,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

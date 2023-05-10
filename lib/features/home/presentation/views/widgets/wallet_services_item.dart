@@ -11,8 +11,8 @@ Widget walletServicesItem({
       child: Container(
         height: 60,
         decoration: BoxDecoration(
-          color: ColorManager.scaffoldBackgroundColor,
-          border: Border.all(color: ColorManager.defaultColor, width: 1.2),
+          color: ColorManager.darkScaffoldBackgroundColor,
+          border: Border.all(color: ColorManager.darkDefaultColor, width: 1.2),
           borderRadius: BorderRadius.circular(12),
         ),
         padding: const EdgeInsets.all(12.0),

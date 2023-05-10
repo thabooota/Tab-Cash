@@ -10,11 +10,11 @@ class SplashScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorManager.scaffoldBackgroundColor,
+        backgroundColor: ColorManager.darkScaffoldBackgroundColor,
         systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: ColorManager.scaffoldBackgroundColor,
-          statusBarBrightness: Brightness.light,
-          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: ColorManager.darkScaffoldBackgroundColor,
+          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.light,
         ),
       ),
       body: const SplashScreenViewBody(),

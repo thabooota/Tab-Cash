@@ -16,7 +16,7 @@ Widget editItem(
       width: MediaQuery.of(context).size.width - 32.0,
       decoration: BoxDecoration(
         border: Border.all(
-          color: ColorManager.defaultColor,
+          color: ColorManager.darkDefaultColor,
           width: 1.0,
         ),
         borderRadius: const BorderRadius.only(
@@ -27,7 +27,7 @@ Widget editItem(
           Icon(
             icon,
             size: 25.0,
-            color: ColorManager.defaultColor.withOpacity(0.8),
+            color: ColorManager.darkDefaultColor.withOpacity(0.8),
           ),
           Container(
             width: 1.0,
@@ -58,7 +58,7 @@ Widget editItem(
           Icon(
             FontAwesomeIcons.penToSquare,
             size: 18.0,
-            color: ColorManager.defaultColor.withOpacity(0.8),
+            color: ColorManager.darkDefaultColor.withOpacity(0.8),
           ),
         ],
       ),

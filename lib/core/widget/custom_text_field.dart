@@ -22,19 +22,19 @@ class CustomTextField {
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        suffixIconColor: ColorManager.defaultColor,
-        prefixIconColor: ColorManager.defaultColor,
+        suffixIconColor: ColorManager.darkDefaultColor,
+        prefixIconColor: ColorManager.darkDefaultColor,
         contentPadding: const EdgeInsetsDirectional.all(10),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
           borderSide: const BorderSide(
-            color: ColorManager.defaultColor,
+            color: ColorManager.darkDefaultColor,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
           borderSide: const BorderSide(
-            color: ColorManager.defaultColor,
+            color: ColorManager.darkDefaultColor,
           ),
         ),
         hintText: text,

@@ -14,7 +14,7 @@ class ChildrenView extends StatelessWidget {
       appBar: appBar(context, text: "Children",centerTitle: true),
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.pushNamed(context, Routes.addChildRoute);
-      },backgroundColor: ColorManager.defaultColor,child: const Icon(FontAwesomeIcons.plus,color: Colors.white,),),
+      },backgroundColor: ColorManager.darkDefaultColor,child: const Icon(FontAwesomeIcons.plus,color: Colors.white,),),
       body: const ChildrenViewBody(),
     );
   }

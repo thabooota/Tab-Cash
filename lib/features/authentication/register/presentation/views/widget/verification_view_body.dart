@@ -50,7 +50,7 @@ class VerificationViewBody extends StatelessWidget {
             ),
             Text(
               "We Will Send 4 digit Verification Code to\n your ${arguments.phoneNumber}, Please Enter It.",
-              style: Styles.textStyle16,
+              style: Styles.textStyle16.copyWith(color: ColorManager.darkTextColor),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
@@ -61,7 +61,7 @@ class VerificationViewBody extends StatelessWidget {
               child: PinCodeTextField(
                 appContext: context,
                 animationCurve: Curves.easeInOut,
-                cursorColor: Colors.black,
+                cursorColor: ColorManager.darkTextColor,
                 keyboardType: TextInputType.number,
                 length: 4,
                 obscureText: false,
@@ -74,15 +74,15 @@ class VerificationViewBody extends StatelessWidget {
                   fieldWidth: 57,
                   borderWidth: 1.2,
                   activeFillColor:
-                      ColorManager.defaultColor, // اللون الي جوا لما يبقا متحدد
+                      ColorManager.darkDefaultColor, // اللون الي جوا لما يبقا متحدد
                   inactiveFillColor: ColorManager
-                      .scaffoldBackgroundColor, // اللون الي جوا لما يبقا مش متحدد
-                  activeColor: ColorManager.defaultColor, // لون البوردرالمتحدده
+                      .darkScaffoldBackgroundColor, // اللون الي جوا لما يبقا مش متحدد
+                  activeColor: ColorManager.darkDefaultColor, // لون البوردرالمتحدده
                   inactiveColor:
-                      ColorManager.defaultColor, // لون البوردر الي مش متحدده
+                      ColorManager.darkDefaultColor, // لون البوردر الي مش متحدده
                   selectedFillColor: ColorManager
-                      .scaffoldBackgroundColor, // اللون الي انا واقف عليه
-                  selectedColor: ColorManager.defaultColor,
+                      .darkScaffoldBackgroundColor, // اللون الي انا واقف عليه
+                  selectedColor: ColorManager.darkDefaultColor,
                 ),
                 animationDuration: const Duration(milliseconds: 300),
                 enableActiveFill: true,
@@ -99,7 +99,7 @@ class VerificationViewBody extends StatelessWidget {
                   'Didn’t Receive Code? ',
                   style: Styles.textStyle16.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: Colors.black,
+                    color: ColorManager.darkTextColor,
                   ),
                 ),
                 TextButton(
@@ -135,7 +135,7 @@ class VerificationViewBody extends StatelessWidget {
               child: Text(
                 'Back',
                 style: Styles.textStyle20
-                    .copyWith(color: ColorManager.defaultColor),
+                    .copyWith(color: ColorManager.darkDefaultColor),
               ),
             ),
           ],

@@ -18,7 +18,7 @@ Widget rowItem({
               children: [
                 Icon(
                   icon,
-                  color: ColorManager.defaultColor,
+                  color: ColorManager.darkDefaultColor,
                 ),
                 const SizedBox(
                   width: 22.0,

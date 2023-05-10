@@ -10,7 +10,7 @@ class MyPainter extends CustomPainter {
 
     // Path number 1
 
-    paint.color = ColorManager.defaultColor;
+    paint.color = ColorManager.darkDefaultColor;
     path = Path();
     path.lineTo(0, size.height * 0.01);
     path.cubicTo(0, size.height * 0.01, 0, 0, size.width * 0.01, 0);

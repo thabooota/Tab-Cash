@@ -22,14 +22,14 @@ Widget notificationItem(
                topLeft:  Radius.circular(40.0),
               ),
               side: BorderSide(
-                color: ColorManager.defaultColor,
+                color: ColorManager.darkDefaultColor,
                 width: 0.8,
               )),
           child: Container(
             padding: const EdgeInsetsDirectional.all(14.0),
             decoration: BoxDecoration(
               color:
-                  readIt ? Colors.white : ColorManager.scaffoldBackgroundColor,
+                  readIt ? Colors.white : ColorManager.darkScaffoldBackgroundColor,
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(40.0),
                 bottomRight: Radius.circular(40.0),
@@ -77,7 +77,7 @@ Widget notificationItem(
             padding: EdgeInsets.only(right: 5.0),
             child: Icon(
               FontAwesomeIcons.solidBell,
-              color: ColorManager.defaultColor,
+              color: ColorManager.darkDefaultColor,
             ),
           )
       ],

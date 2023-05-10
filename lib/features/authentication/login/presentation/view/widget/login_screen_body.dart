@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import '../../../../../../core/widget/logo.dart';
 import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
@@ -55,7 +57,7 @@ class LoginScreenViewBody extends StatelessWidget {
             child: Text(
               'Forget Password?',
               style: Styles.textStyle16.copyWith(
-                color: Colors.black,
+                color: ColorManager.darkTextColor,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -77,7 +79,7 @@ class LoginScreenViewBody extends StatelessWidget {
               'Don’t You have an account?',
               style: Styles.textStyle16.copyWith(
                 fontWeight: FontWeight.w700,
-                color: Colors.black,
+                color: ColorManager.darkTextColor,
               ),
             ),
             TextButton(

@@ -63,7 +63,7 @@ class ProfileViewBody extends StatelessWidget {
                       topLeft: Radius.circular(64.0),
                       topRight: Radius.circular(64.0),
                     ),
-                    color: ColorManager.scaffoldBackgroundColor,
+                    color: ColorManager.darkScaffoldBackgroundColor,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +78,7 @@ class ProfileViewBody extends StatelessWidget {
                       Text(
                         "198765",
                         style: Styles.textStyle24
-                            .copyWith(color: ColorManager.defaultColor),
+                            .copyWith(color: ColorManager.darkDefaultColor),
                       ),
                     ],
                   ),

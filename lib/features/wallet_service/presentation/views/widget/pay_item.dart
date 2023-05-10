@@ -5,7 +5,7 @@ import 'package:smartwallet/core/utils/styles.dart';
 Widget payItem({
   required Function() onTap,
   required Widget widget,
-  Color iconColor = ColorManager.defaultColor,
+  Color iconColor = ColorManager.darkDefaultColor,
   required String text,
 }) =>
     Column(
@@ -15,7 +15,7 @@ Widget payItem({
           onTap: onTap,
           child: CircleAvatar(
             radius: 45.0,
-            backgroundColor: ColorManager.defaultColor,
+            backgroundColor: ColorManager.darkDefaultColor,
             child: CircleAvatar(
               radius: 43.0,
               backgroundColor: Colors.white,
@@ -33,7 +33,7 @@ Widget payItem({
 Widget payItem2({
   required Function() onTap,
   required Widget widget,
-  Color iconColor = ColorManager.defaultColor,
+  Color iconColor = ColorManager.darkDefaultColor,
   required String text,
 }) =>
     Column(
@@ -51,14 +51,14 @@ Widget payItem2({
               color: Colors.white,
               border: Border.all(
                 width: 2.0,
-                color: ColorManager.defaultColor,
+                color: ColorManager.darkDefaultColor,
               )
             ),
             child: widget,
           ),
         ),
         const SizedBox(height: 8.0,),
-        Text(text,style: const TextStyle(color: ColorManager.defaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
+        Text(text,style: const TextStyle(color: ColorManager.darkDefaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
       ],
     );
 
@@ -66,7 +66,7 @@ Widget payItem2({
 Widget payItem3({
   required Function() onTap,
   required Widget widget,
-  Color iconColor = ColorManager.defaultColor,
+  Color iconColor = ColorManager.darkDefaultColor,
   required String text,
 }) =>
     Column(
@@ -77,6 +77,6 @@ Widget payItem3({
           child: ClipRRect(borderRadius: BorderRadius.circular(22.0),child: widget),
         ),
         const SizedBox(height: 8.0,),
-        Text(text,style: const TextStyle(color: ColorManager.defaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
+        Text(text,style: const TextStyle(color: ColorManager.darkDefaultColor,fontSize: 22.0,fontWeight: FontWeight.w600),),
       ],
     );

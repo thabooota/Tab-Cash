@@ -23,7 +23,7 @@ class HeaderSection extends StatelessWidget {
             Text(
               'WELCOME,\n JOUX!',
               style: Styles.textStyle24.copyWith(
-                color: ColorManager.defaultColor,
+                color: ColorManager.darkDefaultColor,
               ),
             ),
           ],
@@ -35,7 +35,7 @@ class HeaderSection extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 24.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24.0),
-            border: Border.all(color: ColorManager.defaultColor, width: 1),
+            border: Border.all(color: ColorManager.darkDefaultColor, width: 1),
           ),
           child: Padding(
             padding:
@@ -49,7 +49,7 @@ class HeaderSection extends StatelessWidget {
                 ),
                 Text(
                   'EGP 650K',
-                  style: Styles.textStyle20.copyWith(color: Colors.black),
+                  style: Styles.textStyle20.copyWith(color: ColorManager.darkTextColor),
                 ),
               ],
             ),

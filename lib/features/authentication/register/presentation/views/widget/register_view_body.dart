@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartwallet/core/utils/assets_manager.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import 'package:smartwallet/features/authentication/register/presentation/views/widget/verification_view_body.dart';
 import '../../../../../../core/widget/custom_text_field.dart';
 import '../../../../../../core/utils/app_router.dart';
@@ -132,8 +133,8 @@ class RegisterViewBody extends StatelessWidget {
             Text(
               'Do You have an account?',
               style: Styles.textStyle16.copyWith(
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
+                fontWeight: FontWeight.w500,
+                color: ColorManager.darkTextColor,
               ),
             ),
             TextButton(

@@ -18,16 +18,16 @@ class HomeView extends StatelessWidget {
         builder: (context, state) {
           var cubit = AppCubit.get(context);
           return Scaffold(
-            backgroundColor: ColorManager.scaffoldBackgroundColor,
+            backgroundColor: ColorManager.darkScaffoldBackgroundColor,
             bottomNavigationBar: CurvedNavigationBar(
-              color: ColorManager.defaultColor,
+              color: ColorManager.darkDefaultColor,
               backgroundColor: Colors.transparent,
               height: 60,
               items: const [
-                Icon(FontAwesomeIcons.house, color: Colors.white),
-                Icon(FontAwesomeIcons.qrcode, color: Colors.white),
-                Icon(FontAwesomeIcons.solidBell, color: Colors.white),
-                Icon(FontAwesomeIcons.solidUser, color: Colors.white),
+                Icon(FontAwesomeIcons.house, color: ColorManager.darkTextColor),
+                Icon(FontAwesomeIcons.qrcode, color: ColorManager.darkTextColor),
+                Icon(FontAwesomeIcons.solidBell, color: ColorManager.darkTextColor),
+                Icon(FontAwesomeIcons.solidUser, color: ColorManager.darkTextColor),
               ],
               index: cubit.currentScreen,
               onTap: (value) {

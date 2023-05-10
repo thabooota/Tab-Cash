@@ -15,7 +15,9 @@ class TapCash extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: RouteGenerator.getRoute,
-      theme: appTheme,
+      // theme: appTheme,
+      darkTheme: appTheme,
+      themeMode: ThemeMode.dark,
     );
   }
 }

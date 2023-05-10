@@ -16,7 +16,7 @@ Widget appearance({
             color: bgColor,
             borderRadius: BorderRadius.circular(12.0),
             border: active
-                ? Border.all(width: 2.0, color: ColorManager.defaultColor)
+                ? Border.all(width: 2.0, color: ColorManager.darkDefaultColor)
                 : Border.all(
                     width: 0.0,
                   ),
@@ -28,7 +28,7 @@ Widget appearance({
             decoration: BoxDecoration(
               color: color,
               border: active
-                  ? Border.all(width: 2.0, color: ColorManager.defaultColor)
+                  ? Border.all(width: 2.0, color: ColorManager.darkDefaultColor)
                   : Border.all(
                       width: 0.0,
                     ),
@@ -47,7 +47,7 @@ Widget appearance({
           Container(
             child: Icon(FontAwesomeIcons.check),
             padding: EdgeInsets.all(3.0),
-            color: ColorManager.defaultColor,
+            color: ColorManager.darkDefaultColor,
           ),
       ],
     );

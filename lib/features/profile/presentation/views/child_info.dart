@@ -22,7 +22,7 @@ class ChildInfo extends StatelessWidget {
             ),
             child: const Text(
               "Edit",
-              style: TextStyle(color: ColorManager.defaultColor, fontSize: 22.0),
+              style: TextStyle(color: ColorManager.darkDefaultColor, fontSize: 22.0),
             ),
           ),
         )

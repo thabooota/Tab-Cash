@@ -45,7 +45,7 @@ class _QRViewState extends State<QRView> {
               height: MediaQuery.of(context).size.height * 0.4,
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
-                border: Border.all(color: ColorManager.defaultColor, width: 2),
+                border: Border.all(color: ColorManager.darkDefaultColor, width: 2),
                 borderRadius: BorderRadius.circular(40.0),
                 color: Colors.white,
               ),
@@ -148,7 +148,7 @@ class _QRViewState extends State<QRView> {
                   const SizedBox(height: 8.0,),
                   Text(
                     serviceName,
-                    style: Styles.textStyle24.copyWith(color: ColorManager.defaultColor),
+                    style: Styles.textStyle24.copyWith(color: ColorManager.darkDefaultColor),
                   ),
                   const SizedBox(
                     height: 30.0,

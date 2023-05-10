@@ -31,7 +31,7 @@ class HistoryViewBody extends StatelessWidget {
           children: [
             const Icon(
               FontAwesomeIcons.moneyBillTransfer,
-              color: ColorManager.defaultColor,
+              color: ColorManager.darkDefaultColor,
             ),
             const SizedBox(width: 20.0),
             Column(

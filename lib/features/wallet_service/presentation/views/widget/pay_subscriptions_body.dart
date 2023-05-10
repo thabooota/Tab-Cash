@@ -15,14 +15,14 @@ class PaySubscriptionsBody extends StatelessWidget {
       const Icon(
         FontAwesomeIcons.bowlingBall,
         size: 45.0,
-        color: ColorManager.defaultColor,
+        color: ColorManager.darkDefaultColor,
       ),
       Transform.rotate(
         angle: 150,
         child: const Icon(
           FontAwesomeIcons.dumbbell,
           size: 40.0,
-          color: ColorManager.defaultColor,
+          color: ColorManager.darkDefaultColor,
         ),
       ),
       SvgPicture.asset(
@@ -85,7 +85,7 @@ class PaySubscriptionsBody extends StatelessWidget {
                   widget: const Icon(
                     FontAwesomeIcons.bowlingBall,
                     size: 45.0,
-                    color: ColorManager.defaultColor,
+                    color: ColorManager.darkDefaultColor,
                   ),
                   text: 'Club',
                 ),
@@ -102,7 +102,7 @@ class PaySubscriptionsBody extends StatelessWidget {
                       child: const Icon(
                         FontAwesomeIcons.dumbbell,
                         size: 40.0,
-                        color: ColorManager.defaultColor,
+                        color: ColorManager.darkDefaultColor,
                       ),
                     ),
                     text: 'GYM'),

@@ -7,7 +7,7 @@ AppBar appBar(
   required String text,
       Color? titleColor,
   bool centerTitle = false,
-      Color bgColor = ColorManager.scaffoldBackgroundColor,
+      Color bgColor = ColorManager.darkScaffoldBackgroundColor,
       List<Widget>? actions
     }) =>
     AppBar(
@@ -30,9 +30,9 @@ AppBar appBar(
         ),
       ),
       systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: ColorManager.scaffoldBackgroundColor,
-          statusBarBrightness: Brightness.light,
-          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: ColorManager.darkScaffoldBackgroundColor,
+          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.light,
       ),
       centerTitle: centerTitle,
     );

@@ -98,7 +98,7 @@ class ChargingWalletViewBody extends StatelessWidget {
           child: Text(
             'Cancel',
             style:
-                Styles.textStyle20.copyWith(color: ColorManager.defaultColor),
+                Styles.textStyle20.copyWith(color: ColorManager.darkDefaultColor),
           ),
         ))
       ],
