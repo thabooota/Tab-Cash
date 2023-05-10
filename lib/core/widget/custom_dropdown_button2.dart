@@ -75,7 +75,7 @@ class CustomDropdownButton2 extends StatelessWidget {
             maxLines: 1,
             style: TextStyle(
               fontSize: 14,
-              color: Theme.of(context).hintColor,
+              color: Colors.grey,
             ),
           ),
         ),
@@ -90,6 +90,7 @@ class CustomDropdownButton2 extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
               style: const TextStyle(
+                color: ColorManager.darkTextColor,
                 fontSize: 14,
               ),
             ),
@@ -125,6 +126,7 @@ class CustomDropdownButton2 extends StatelessWidget {
           padding: dropdownPadding,
           decoration: dropdownDecoration ??
               BoxDecoration(
+                color: ColorManager.darkScaffoldBackgroundColor,
                 borderRadius: BorderRadius.circular(14),
               ),
           elevation: dropdownElevation ?? 8,

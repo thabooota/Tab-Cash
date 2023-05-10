@@ -27,7 +27,8 @@ class ProfileViewBody extends StatelessWidget {
               bottom: 140.0,
               child: Text(
                 "Mohammed",
-                style: Styles.textStyle32.copyWith(color: Colors.white),
+                style: Styles.textStyle32
+                    .copyWith(color: ColorManager.darkTextColor),
               ),
             ),
           ],
@@ -56,6 +57,14 @@ class ProfileViewBody extends StatelessWidget {
             onTap: () {
               showModalBottomSheet(
                 context: context,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(64.0),
+                    topRight: Radius.circular(64.0),
+                  ),
+                ),
+                elevation: 0.0,
+                backgroundColor: ColorManager.darkScaffoldBackgroundColor,
                 builder: (context) => Container(
                   height: MediaQuery.of(context).size.height / 3,
                   decoration: const BoxDecoration(
@@ -74,7 +83,9 @@ class ProfileViewBody extends StatelessWidget {
                         style: Styles.textStyle24,
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 18.0,),
+                      const SizedBox(
+                        height: 18.0,
+                      ),
                       Text(
                         "198765",
                         style: Styles.textStyle24

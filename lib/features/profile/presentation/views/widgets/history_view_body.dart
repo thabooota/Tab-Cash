@@ -39,11 +39,11 @@ class HistoryViewBody extends StatelessWidget {
               children: [
                 Text(
                   'Service Name:$serviceName',
-                  style: Styles.textStyle16.copyWith(color: Colors.black),
+                  style: Styles.textStyle16.copyWith(color: ColorManager.darkTextColor),
                 ),
                 Text(
                   'Service Number :$serviceNum ',
-                  style: Styles.textStyle16.copyWith(color: Colors.black),
+                  style: Styles.textStyle16.copyWith(color: ColorManager.darkTextColor),
                 ),
                 Text(
                   '18 May 2023  - 2:35 pm',

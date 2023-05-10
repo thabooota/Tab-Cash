@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 
 import 'appearance.dart';
 
@@ -13,7 +14,7 @@ class AppearanceSection extends StatelessWidget {
         const Text(
           "Appearance",
           style: TextStyle(
-              color: Colors.black45,
+              color: ColorManager.darkTextColor,
               fontWeight: FontWeight.w600,
               fontSize: 22.0),
         ),
@@ -25,8 +26,8 @@ class AppearanceSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            appearance(bgColor: Colors.grey.withOpacity(0.45), color: Colors.white, textColor: Colors.black, active: true),
-            appearance(bgColor: Color(0xff454545), color: Color(0xff161616),textColor: Colors.white, active: false),
+            appearance(bgColor: Colors.grey.withOpacity(0.9), color: Colors.white, textColor: Colors.black, active: false),
+            appearance(bgColor: Color(0xff454545), color: Color(0xff161616),textColor: Colors.white, active: true),
           ],
         ),
       ],

@@ -5,7 +5,7 @@ import '../utils/color_manager.dart';
 AppBar appBar(
   context, {
   required String text,
-      Color? titleColor,
+      Color? titleColor = ColorManager.darkTextColor,
   bool centerTitle = false,
       Color bgColor = ColorManager.darkScaffoldBackgroundColor,
       List<Widget>? actions
@@ -18,7 +18,7 @@ AppBar appBar(
         onPressed: () {
           Navigator.pop(context);
         },
-        icon: const Icon(Icons.arrow_back_ios_new),
+        icon: const Icon(Icons.arrow_back_ios_new,color: ColorManager.darkTextColor,),
       ),
       title: Text(
         text,

@@ -50,7 +50,7 @@ Widget editItem(
                   text,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
-                  style: Styles.textStyle20.copyWith(color: Colors.black),
+                  style: Styles.textStyle20.copyWith(color: ColorManager.darkTextColor),
                 ),
               ],
             ),

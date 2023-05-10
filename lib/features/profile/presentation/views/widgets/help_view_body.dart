@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 import 'package:smartwallet/core/utils/styles.dart';
 
 class HelpViewBody extends StatelessWidget {
@@ -6,16 +7,19 @@ class HelpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemBuilder: (context, index) => questionItem(),
-      itemCount: 4,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 12.0),
+      child: ListView.builder(
+        itemBuilder: (context, index) => questionItem(),
+        itemCount: 4,
+      ),
     );
   }
 }
 
 Widget questionItem() => Card(
       elevation: 2.0,
-      color: Colors.white,
+      color: ColorManager.darkScaffoldBackgroundColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
       ),
@@ -25,7 +29,7 @@ Widget questionItem() => Card(
         child: RichText(
           text: TextSpan(
               text: "Lorem ipsum dolor sit?\n",
-              style: Styles.textStyle24.copyWith(fontWeight: FontWeight.w700),
+              style: const TextStyle(color: ColorManager.darkDefaultColor,fontWeight: FontWeight.w700,fontSize: 24.0),
               children: [
                 TextSpan(
                   text:

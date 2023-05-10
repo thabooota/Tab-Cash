@@ -31,7 +31,7 @@ class SmartCardViewBody extends StatelessWidget {
                   angle: 150.4,
                   child: const Text(
                     "952",
-                    style: Styles.textStyle24,
+                    style: TextStyle(fontSize: 24.0,fontWeight: FontWeight.w600,color: Colors.black),
                   ),
                 ),
               ),

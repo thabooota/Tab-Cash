@@ -16,6 +16,9 @@ class SettingViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 28.0),
       child: Column(
         children: const [
+          SizedBox(
+            height: 20.0,
+          ),
           AppearanceSection(),
           SizedBox(
             height: 60.0,

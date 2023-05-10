@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:smartwallet/core/utils/color_manager.dart';
 
 import 'editItem.dart';
 
@@ -13,7 +14,7 @@ class EditSection extends StatelessWidget {
       children: [
         const Text(
           "Edit",
-          style: TextStyle(color: Colors.black45,fontWeight: FontWeight.w600,fontSize: 22.0),
+          style: TextStyle(color: ColorManager.darkTextColor,fontWeight: FontWeight.w600,fontSize: 22.0),
         ),
         Container(
           height: 0.8,

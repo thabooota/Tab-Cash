@@ -11,6 +11,9 @@ class ChildInfoBody extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 22.0),
       children: const [
+        SizedBox(
+          height: 10.0,
+        ),
         InformationChildSection(),
         SizedBox(
           height: 35.0,
@@ -35,7 +38,7 @@ class InformationChildSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(18.0),
       ),
       elevation: 2.5,
-      color: Colors.white,
+      color: ColorManager.darkScaffoldBackgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 22.0),
         child: Column(
@@ -43,7 +46,7 @@ class InformationChildSection extends StatelessWidget {
           children: [
             RichText(
               text: const TextSpan(
-                  text: "Full Name: ",
+                  text: "Full Name:  ",
                   style: TextStyle(
                     color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
@@ -53,7 +56,7 @@ class InformationChildSection extends StatelessWidget {
                     TextSpan(
                       text: "Mohammed Ahmed",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: ColorManager.darkTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400,
                       ),
@@ -65,7 +68,7 @@ class InformationChildSection extends StatelessWidget {
             ),
             RichText(
               text: const TextSpan(
-                  text: "National ID: ",
+                  text: "National ID:  ",
                   style: TextStyle(
                     color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
@@ -75,7 +78,7 @@ class InformationChildSection extends StatelessWidget {
                     TextSpan(
                       text: "12345678912345",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: ColorManager.darkTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400,
                       ),
@@ -87,7 +90,7 @@ class InformationChildSection extends StatelessWidget {
             ),
             RichText(
               text: const TextSpan(
-                  text: "Phone Number: ",
+                  text: "Phone Number:  ",
                   style: TextStyle(
                     color: ColorManager.darkDefaultColor,
                     fontSize: 24.0,
@@ -97,7 +100,7 @@ class InformationChildSection extends StatelessWidget {
                     TextSpan(
                       text: "01227559261",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: ColorManager.darkTextColor,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400,
                       ),
@@ -176,93 +179,110 @@ class BalanceChildSection extends StatelessWidget {
   }
 }
 
-Widget orderReviewItem() => Container(
-      padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12.0),
-      decoration: const BoxDecoration(
+Widget orderReviewItem() => Card(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(16.0), topLeft: Radius.circular(16.0)),
-        color: ColorManager.darkDefaultColor,
+        side: BorderSide(
+          color: ColorManager.darkDefaultColor
+        )
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          RichText(
-            text: const TextSpan(
-              text: "Service Name:    ",
-              style: TextStyle(
-                color: Colors.white60,
-                fontSize: 22.0,
-                fontWeight: FontWeight.w600,
+      elevation: 5.0,
+      color: ColorManager.darkScaffoldBackgroundColor,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12.0),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(16.0), topLeft: Radius.circular(16.0)),
+          color: ColorManager.darkScaffoldBackgroundColor,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RichText(
+              text: const TextSpan(
+                text: "Service Name:   ",
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.w600,
+                ),
+                children: [
+                  TextSpan(
+                    text: "Payment Netflix",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
               ),
+            ),
+            RichText(
+              text: const TextSpan(
+                text: "Price:   ",
+                style: TextStyle(
+                  color: Colors.white60,
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.w600,
+                ),
+                children: [
+                  TextSpan(
+                    text: "165 EGP",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextSpan(
-                  text: "Payment Netflix",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400,
+                Container(
+                  width: 90.0,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10.0, vertical: 1.0),
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: const Text(
+                    "Reject",
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorManager.darkTextColor),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                Container(
+                  width: 90.0,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10.0, vertical: 1.0),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: const Text(
+                    "Accept",
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorManager.darkTextColor),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ],
             ),
-          ),
-          RichText(
-            text: const TextSpan(
-              text: "Price:    ",
-              style: TextStyle(
-                color: Colors.white60,
-                fontSize: 22.0,
-                fontWeight: FontWeight.w600,
-              ),
-              children: [
-                TextSpan(
-                  text: "165 EGP",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                width: 90.0,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 1.0),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: const Text(
-                  "Reject",
-                  style: Styles.textStyle20,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              const SizedBox(
-                width: 8.0,
-              ),
-              Container(
-                width: 90.0,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 1.0),
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: const Text(
-                  "Accept",
-                  style: Styles.textStyle20,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ],
-          ),
-        ],
+          ],
+        ),
       ),
     );
 
@@ -277,7 +297,7 @@ class OrderReviewListView extends StatelessWidget {
         const Text(
           "Orders Review",
           style: TextStyle(
-              color: Colors.black45,
+              color: ColorManager.darkTextColor,
               fontWeight: FontWeight.w600,
               fontSize: 22.0),
         ),
@@ -293,10 +313,9 @@ class OrderReviewListView extends StatelessWidget {
           separatorBuilder: (context, index) => const SizedBox(
             height: 12.0,
           ),
-          itemCount:3,
+          itemCount: 3,
         ),
       ],
     );
   }
 }
-

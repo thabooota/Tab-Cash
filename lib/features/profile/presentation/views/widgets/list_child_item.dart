@@ -15,7 +15,7 @@ Widget listChildrenItem(context) => InkWell(
           bottomRight: Radius.circular(52.0),
           topLeft: Radius.circular(52.0)),
     ),
-    color: Colors.white,
+    color: ColorManager.darkScaffoldBackgroundColor,
     child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       width: MediaQuery.of(context).size.width - 32.0,
@@ -39,11 +39,11 @@ Widget listChildrenItem(context) => InkWell(
             children: const [
               Text(
                 "Phone: 01227559261",
-                style: TextStyle(color: Colors.black54),
+                style: TextStyle(color: ColorManager.darkTextColor),
               ),
               Text(
                 "Balane: 200.0",
-                style: TextStyle(color: Colors.black54),
+                style: TextStyle(color: ColorManager.darkTextColor),
               ),
             ],
           ),

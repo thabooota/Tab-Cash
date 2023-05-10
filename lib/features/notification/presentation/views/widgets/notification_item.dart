@@ -29,7 +29,7 @@ Widget notificationItem(
             padding: const EdgeInsetsDirectional.all(14.0),
             decoration: BoxDecoration(
               color:
-                  readIt ? ColorManager.darkMode : ColorManager.gray2,
+                  readIt ? ColorManager.darkScaffoldBackgroundColor : ColorManager.gray2,
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(40.0),
                 bottomRight: Radius.circular(40.0),

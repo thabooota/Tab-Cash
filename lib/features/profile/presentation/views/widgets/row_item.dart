@@ -26,7 +26,7 @@ Widget rowItem({
                 Text(
                   text,
                   style: const TextStyle(
-                      color: Colors.black,
+                      color: ColorManager.darkTextColor,
                       fontWeight: FontWeight.w400,
                       fontSize: 22.0),
                 ),

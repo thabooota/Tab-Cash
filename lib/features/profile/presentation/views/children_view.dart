@@ -11,6 +11,7 @@ class ChildrenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorManager.darkScaffoldBackgroundColor,
       appBar: appBar(context, text: "Children",centerTitle: true),
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.pushNamed(context, Routes.addChildRoute);
